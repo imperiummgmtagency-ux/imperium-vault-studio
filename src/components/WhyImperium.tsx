@@ -10,7 +10,7 @@ const features = [
 
 const WhyImperium = () => (
   <SectionWrapper id="why">
-    <h2 className="text-3xl md:text-5xl font-heading font-semibold text-center mb-6">
+    <h2 className="text-3xl md:text-5xl lg:text-6xl font-heading font-semibold text-center mb-6">
       Serious Creators Need More Than Hype
     </h2>
     <p className="text-muted-foreground text-center max-w-3xl mx-auto mb-16 text-lg leading-relaxed">

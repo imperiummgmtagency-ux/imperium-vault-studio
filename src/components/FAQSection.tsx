@@ -12,7 +12,7 @@ const faqs = [
 
 const FAQSection = () => (
   <SectionWrapper id="faq">
-    <h2 className="text-3xl md:text-5xl font-heading font-semibold text-center mb-16">
+    <h2 className="text-3xl md:text-5xl lg:text-6xl font-heading font-semibold text-center mb-16">
       Frequently Asked Questions
     </h2>
     <div className="max-w-3xl mx-auto">

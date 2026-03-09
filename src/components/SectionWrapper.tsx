@@ -14,7 +14,7 @@ const SectionWrapper = ({ children, id, className = "" }: SectionWrapperProps) =
     whileInView={{ opacity: 1, y: 0 }}
     viewport={{ once: true, margin: "-100px" }}
     transition={{ duration: 0.7, ease: "easeOut" }}
-    className={`py-24 md:py-32 px-6 ${className}`}
+    className={`py-32 md:py-40 px-6 ${className}`}
   >
     <div className="max-w-5xl mx-auto">{children}</div>
   </motion.section>
