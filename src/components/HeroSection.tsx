@@ -12,7 +12,7 @@ const HeroSection = () => (
         transition={{ duration: 0.6, delay: 0.2 }}
         className="mb-8"
       >
-        <span className="text-sm tracking-[0.3em] uppercase text-primary font-body font-medium">
+        <span className="text-xs tracking-[0.35em] uppercase text-primary/80 font-body font-medium">
           Imperium Management Agency
         </span>
       </motion.div>
