@@ -13,7 +13,7 @@ const OperationalInfrastructure = () => (
   <SectionWrapper id="infrastructure">
     <div className="max-w-3xl mx-auto text-center mb-16">
       <h2 className="text-3xl md:text-5xl lg:text-6xl font-heading font-semibold mb-6">
-        Operational Infrastructure
+        Creator Operations Infrastructure
       </h2>
       <p className="text-muted-foreground text-lg leading-relaxed">
         Imperium Management Agency focuses on building strong operational systems behind creator brands. Our goal is to help creators operate more efficiently while improving monetization structure and long-term scalability.

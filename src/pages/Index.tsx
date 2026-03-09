@@ -3,6 +3,7 @@ import GoldDivider from "@/components/GoldDivider";
 import WhyImperium from "@/components/WhyImperium";
 import WhatWeHelp from "@/components/WhatWeHelp";
 import OperationalInfrastructure from "@/components/OperationalInfrastructure";
+import ApproachSection from "@/components/ApproachSection";
 import PrivacySection from "@/components/PrivacySection";
 import SelectiveSection from "@/components/SelectiveSection";
 import ProcessSection from "@/components/ProcessSection";
@@ -36,6 +37,8 @@ const Index = () => (
     <WhatWeHelp />
     <GoldDivider />
     <OperationalInfrastructure />
+    <GoldDivider />
+    <ApproachSection />
     <GoldDivider />
     <PrivacySection />
     <GoldDivider />
