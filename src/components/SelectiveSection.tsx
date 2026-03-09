@@ -4,15 +4,17 @@ const SelectiveSection = () => (
   <SectionWrapper id="selective">
     <div className="max-w-3xl mx-auto text-center">
       <h2 className="text-3xl md:text-5xl font-heading font-semibold mb-6">
-        We Do Not Work With Everyone
+        Selective Partnerships
       </h2>
       <div className="space-y-6 text-muted-foreground text-lg leading-relaxed">
-        <p>Imperium Management Agency is built around fit, not volume.</p>
         <p>
-          We look for creators who value professionalism, consistency, and long-term brand growth. The right partnership matters more than the number of creators we work with.
+          Imperium Management Agency is structured around quality partnerships rather than volume. We work with creators who value professionalism, consistency, and long-term brand growth.
         </p>
         <p>
-          Our process allows us to focus attention on creators who are serious about operating at a higher level.
+          Each application is reviewed individually to ensure strong alignment between the creator and our operational approach.
+        </p>
+        <p>
+          This process allows us to focus our attention on creators who are serious about operating at a higher level.
         </p>
       </div>
     </div>

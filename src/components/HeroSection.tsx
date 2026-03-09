@@ -61,7 +61,7 @@ const HeroSection = () => (
         transition={{ duration: 0.7, delay: 1.0 }}
         className="text-xs tracking-[0.2em] uppercase text-muted-foreground"
       >
-        Selective partnerships&nbsp;&nbsp;•&nbsp;&nbsp;Private onboarding&nbsp;&nbsp;•&nbsp;&nbsp;Serious creators only
+        Private partnerships&nbsp;&nbsp;•&nbsp;&nbsp;Confidential creator relationships&nbsp;&nbsp;•&nbsp;&nbsp;Professional growth infrastructure
       </motion.p>
     </div>
   </section>

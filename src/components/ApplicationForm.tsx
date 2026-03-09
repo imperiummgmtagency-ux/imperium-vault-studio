@@ -65,7 +65,7 @@ const ApplicationForm = () => {
           type="submit"
           className="w-full py-4 bg-primary text-primary-foreground font-body text-sm tracking-wider uppercase hover:bg-gold-dark transition-colors duration-300"
         >
-          Submit Application
+          Request Partnership
         </button>
       </form>
     </SectionWrapper>
