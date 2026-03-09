@@ -8,13 +8,13 @@ const PrivacySection = () => (
       </h2>
       <div className="space-y-6 text-muted-foreground text-lg leading-relaxed">
         <p>
-          Many creators we work with operate under private agreements and prefer to keep their partnerships confidential.
+          Many creators we work with prefer private partnerships and operate under confidential agreements. Because of this, Imperium does not publicly display creator portfolios, earnings claims, or client lists.
         </p>
         <p>
-          Because of this, Imperium does not publicly display creator portfolios, earnings claims, or case studies. Our focus is building strong systems, improving operational efficiency, and maintaining professional long-term partnerships behind the scenes.
+          Our focus is building strong systems, professional operations, and long-term partnerships behind the scenes.
         </p>
         <p>
-          Discretion and privacy are core parts of how we operate.
+          Privacy and discretion remain core principles of how Imperium operates.
         </p>
       </div>
     </div>

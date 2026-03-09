@@ -7,6 +7,7 @@ import SelectiveSection from "@/components/SelectiveSection";
 import ProcessSection from "@/components/ProcessSection";
 import FAQSection from "@/components/FAQSection";
 import CTASection from "@/components/CTASection";
+import PartnershipAvailability from "@/components/PartnershipAvailability";
 import ApplicationForm from "@/components/ApplicationForm";
 import Footer from "@/components/Footer";
 
@@ -27,6 +28,8 @@ const Index = () => (
     <FAQSection />
     <GoldDivider />
     <CTASection />
+    <GoldDivider />
+    <PartnershipAvailability />
     <GoldDivider />
     <ApplicationForm />
     <Footer />
