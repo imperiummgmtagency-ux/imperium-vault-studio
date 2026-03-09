@@ -12,7 +12,7 @@ const HeroSection = () => (
         transition={{ duration: 0.6, delay: 0.2 }}
         className="mb-8"
       >
-        <span className="text-sm tracking-[0.3em] uppercase text-primary font-body font-medium">
+        <span className="text-xs tracking-[0.35em] uppercase text-primary/80 font-body font-medium">
           Imperium Management Agency
         </span>
       </motion.div>
@@ -23,7 +23,7 @@ const HeroSection = () => (
         transition={{ duration: 0.8, delay: 0.4 }}
         className="text-4xl md:text-6xl lg:text-7xl font-heading font-semibold leading-tight mb-8 text-foreground"
       >
-        Private Management For Creators Ready To Scale
+        Private Infrastructure For Creators Ready To Scale
       </motion.h1>
 
       <motion.p
@@ -32,7 +32,7 @@ const HeroSection = () => (
         transition={{ duration: 0.7, delay: 0.6 }}
         className="text-lg md:text-xl text-muted-foreground font-light max-w-3xl mx-auto mb-12 leading-relaxed"
       >
-        Imperium Management Agency works with creators who want stronger systems, better structure, and a more professional approach to growth. We operate with discretion, selectivity, and long-term focus.
+        Imperium Management Agency works with creators who want stronger systems, better structure, and a more professional approach to growth. Our partnerships focus on efficiency, discretion, and long-term operational support.
       </motion.p>
 
       <motion.div
@@ -45,7 +45,7 @@ const HeroSection = () => (
           href="#apply"
           className="px-8 py-4 bg-primary text-primary-foreground font-body text-sm tracking-wider uppercase hover:bg-gold-dark transition-colors duration-300"
         >
-          Apply For Partnership
+          Request Partnership
         </a>
         <a
           href="#why"
@@ -61,7 +61,7 @@ const HeroSection = () => (
         transition={{ duration: 0.7, delay: 1.0 }}
         className="text-xs tracking-[0.2em] uppercase text-muted-foreground"
       >
-        Selective partnerships&nbsp;&nbsp;•&nbsp;&nbsp;Private onboarding&nbsp;&nbsp;•&nbsp;&nbsp;Serious creators only
+        Private partnerships&nbsp;&nbsp;•&nbsp;&nbsp;Confidential creator relationships&nbsp;&nbsp;•&nbsp;&nbsp;Professional growth infrastructure
       </motion.p>
     </div>
   </section>
