@@ -23,7 +23,7 @@ const HeroSection = () => (
         transition={{ duration: 0.8, delay: 0.4 }}
         className="text-4xl md:text-6xl lg:text-7xl font-heading font-semibold leading-tight mb-8 text-foreground"
       >
-        Private Management For Creators Ready To Scale
+        Private Infrastructure For Creators Ready To Scale
       </motion.h1>
 
       <motion.p
