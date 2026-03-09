@@ -14,7 +14,7 @@ const WhyImperium = () => (
       Serious Creators Need More Than Hype
     </h2>
     <p className="text-muted-foreground text-center max-w-3xl mx-auto mb-16 text-lg leading-relaxed">
-      Many creators eventually reach a point where growth requires stronger systems, clearer structure, and more efficient operations. Imperium Management Agency provides the infrastructure and support that allows creators to operate at a higher level.
+      Many creators eventually reach a point where growth requires stronger systems, clearer structure, and more efficient operations. Imperium Management Agency provides the support and operational framework that allows creators to operate at a higher level.
     </p>
     <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
       {features.map((f) => (

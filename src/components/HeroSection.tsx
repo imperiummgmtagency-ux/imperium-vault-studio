@@ -30,9 +30,18 @@ const HeroSection = () => (
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.7, delay: 0.6 }}
-        className="text-lg md:text-xl text-muted-foreground font-light max-w-3xl mx-auto mb-12 leading-relaxed"
+        className="text-lg md:text-xl text-muted-foreground font-light max-w-3xl mx-auto mb-6 leading-relaxed"
       >
         Imperium Management Agency works with creators who want stronger systems, better structure, and a more professional operational environment. Our partnerships focus on efficiency, discretion, and long-term creator growth.
+      </motion.p>
+
+      <motion.p
+        initial={{ opacity: 0, y: 15 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.7, delay: 0.7 }}
+        className="text-sm md:text-base text-muted-foreground/70 max-w-2xl mx-auto mb-12 leading-relaxed"
+      >
+        Built for creators operating at scale who want stronger systems behind their brand.
       </motion.p>
 
       <motion.div

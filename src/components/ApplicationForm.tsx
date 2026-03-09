@@ -22,7 +22,7 @@ const ApplicationForm = () => {
   return (
     <SectionWrapper id="apply">
       <p className="text-xs tracking-[0.2em] uppercase text-primary/70 text-center mb-6 font-body">
-        Imperium reviews creator partnerships selectively to ensure strong alignment and operational focus.
+        Imperium reviews creator partnerships selectively to maintain operational focus.
       </p>
       <h2 className="text-3xl md:text-5xl lg:text-6xl font-heading font-semibold text-center mb-4">
         Request Partnership Review
