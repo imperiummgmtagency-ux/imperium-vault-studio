@@ -1,14 +1,36 @@
-// Update this page (the content is just a fallback if you fail to update the page)
+import HeroSection from "@/components/HeroSection";
+import GoldDivider from "@/components/GoldDivider";
+import WhyImperium from "@/components/WhyImperium";
+import WhatWeHelp from "@/components/WhatWeHelp";
+import PrivacySection from "@/components/PrivacySection";
+import SelectiveSection from "@/components/SelectiveSection";
+import ProcessSection from "@/components/ProcessSection";
+import FAQSection from "@/components/FAQSection";
+import CTASection from "@/components/CTASection";
+import ApplicationForm from "@/components/ApplicationForm";
+import Footer from "@/components/Footer";
 
-const Index = () => {
-  return (
-    <div className="flex min-h-screen items-center justify-center bg-background">
-      <div className="text-center">
-        <h1 className="mb-4 text-4xl font-bold">Welcome to Your Blank App</h1>
-        <p className="text-xl text-muted-foreground">Start building your amazing project here!</p>
-      </div>
-    </div>
-  );
-};
+const Index = () => (
+  <div className="min-h-screen bg-background text-foreground">
+    <HeroSection />
+    <GoldDivider />
+    <WhyImperium />
+    <GoldDivider />
+    <WhatWeHelp />
+    <GoldDivider />
+    <PrivacySection />
+    <GoldDivider />
+    <SelectiveSection />
+    <GoldDivider />
+    <ProcessSection />
+    <GoldDivider />
+    <FAQSection />
+    <GoldDivider />
+    <CTASection />
+    <GoldDivider />
+    <ApplicationForm />
+    <Footer />
+  </div>
+);
 
 export default Index;
