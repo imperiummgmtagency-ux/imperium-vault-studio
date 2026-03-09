@@ -22,10 +22,10 @@ const ApplicationForm = () => {
   return (
     <SectionWrapper id="apply">
       <h2 className="text-3xl md:text-5xl font-heading font-semibold text-center mb-4">
-        Apply For Partnership
+        Request Partnership Review
       </h2>
-      <p className="text-muted-foreground text-center mb-12 text-sm tracking-wide">
-        All applications are reviewed confidentially.
+      <p className="text-muted-foreground text-center mb-12 text-base leading-relaxed max-w-2xl mx-auto">
+        Imperium reviews applications selectively. If your brand appears to align with our structure and approach, a member of our team may reach out to continue the conversation.
       </p>
 
       <form onSubmit={handleSubmit} className="max-w-2xl mx-auto space-y-5">
