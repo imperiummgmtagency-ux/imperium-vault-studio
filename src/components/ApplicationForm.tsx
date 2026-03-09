@@ -24,7 +24,7 @@ const ApplicationForm = () => {
       <p className="text-xs tracking-[0.2em] uppercase text-primary/70 text-center mb-6 font-body">
         Imperium reviews creator partnerships selectively to ensure strong alignment and operational focus.
       </p>
-      <h2 className="text-3xl md:text-5xl font-heading font-semibold text-center mb-4">
+      <h2 className="text-3xl md:text-5xl lg:text-6xl font-heading font-semibold text-center mb-4">
         Request Partnership Review
       </h2>
       <p className="text-muted-foreground text-center mb-12 text-base leading-relaxed max-w-2xl mx-auto">
