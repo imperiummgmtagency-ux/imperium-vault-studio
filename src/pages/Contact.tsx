@@ -34,8 +34,17 @@ const Contact = () => {
             <h1 className="text-3xl md:text-5xl font-heading font-semibold text-center mb-4">
               Request a Private Review
             </h1>
+            <p className="text-muted-foreground text-center text-base leading-relaxed max-w-2xl mx-auto mb-4">
+              Imperium Management Agency reviews creator inquiries selectively.
+            </p>
+            <p className="text-muted-foreground text-center text-base leading-relaxed max-w-2xl mx-auto mb-4">
+              If your brand aligns with our operational approach and partnership structure, a member of our team may reach out privately to continue the conversation.
+            </p>
+            <p className="text-muted-foreground text-center text-base leading-relaxed max-w-2xl mx-auto mb-4">
+              All submissions are reviewed confidentially.
+            </p>
             <p className="text-muted-foreground text-center text-base leading-relaxed max-w-2xl mx-auto mb-16">
-              Imperium Management Agency reviews creator inquiries selectively. If your brand aligns with our structure and approach, a member of our team may reach out privately.
+              Please provide accurate information so the inquiry can be reviewed appropriately.
             </p>
 
             <form onSubmit={handleSubmit} className="space-y-5">
