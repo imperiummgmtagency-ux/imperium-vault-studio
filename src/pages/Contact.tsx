@@ -63,7 +63,7 @@ const Contact = () => {
                 className={inputClass + " resize-none"}
               />
               <textarea
-                placeholder="Brief description of your brand"
+                placeholder="Brief description of your creator brand"
                 rows={3}
                 className={inputClass + " resize-none"}
               />
