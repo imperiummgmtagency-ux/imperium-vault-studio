@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
+import imperiumLogo from "@/assets/imperium-logo.png";
 
 const Header = () => {
   const [scrolled, setScrolled] = useState(false);
