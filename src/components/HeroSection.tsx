@@ -45,7 +45,7 @@ const HeroSection = () => (
           href="#apply"
           className="px-8 py-4 bg-primary text-primary-foreground font-body text-sm tracking-wider uppercase hover:bg-gold-dark transition-colors duration-300"
         >
-          Apply For Partnership
+          Request Partnership
         </a>
         <a
           href="#why"
