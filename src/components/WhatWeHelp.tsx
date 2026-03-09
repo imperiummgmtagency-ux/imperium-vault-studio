@@ -15,7 +15,7 @@ const items = [
 
 const WhatWeHelp = () => (
   <SectionWrapper id="services">
-    <h2 className="text-3xl md:text-5xl font-heading font-semibold text-center mb-6">
+    <h2 className="text-3xl md:text-5xl lg:text-6xl font-heading font-semibold text-center mb-6">
       Operational Support For Modern Creators
     </h2>
     <p className="text-muted-foreground text-center max-w-3xl mx-auto mb-16 text-lg leading-relaxed">

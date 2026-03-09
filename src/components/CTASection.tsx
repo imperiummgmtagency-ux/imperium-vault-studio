@@ -3,7 +3,7 @@ import SectionWrapper from "./SectionWrapper";
 const CTASection = () => (
   <SectionWrapper id="cta">
     <div className="text-center max-w-3xl mx-auto">
-      <h2 className="text-3xl md:text-5xl font-heading font-semibold mb-6">
+      <h2 className="text-3xl md:text-5xl lg:text-6xl font-heading font-semibold mb-6">
         For Creators Looking For A Higher Standard
       </h2>
       <p className="text-muted-foreground text-lg leading-relaxed mb-10">
