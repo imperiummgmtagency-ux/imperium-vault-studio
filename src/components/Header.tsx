@@ -24,12 +24,9 @@ const Header = () => {
     >
       <div className="max-w-7xl mx-auto px-6 grid grid-cols-3 items-center h-16">
         {/* Logo text */}
-        <a
-          href="#"
-          className="font-heading text-lg md:text-xl font-semibold tracking-wide text-foreground hover:brightness-125 transition-all duration-300"
-        >
+        <span className="font-heading text-lg md:text-xl font-semibold tracking-wide text-foreground">
           IMPERIUM
-        </a>
+        </span>
 
         {/* Center logo */}
         <div className="flex justify-center">
