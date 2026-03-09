@@ -29,6 +29,8 @@ const Index = () => (
     <GoldDivider />
     <CTASection />
     <GoldDivider />
+    <PartnershipAvailability />
+    <GoldDivider />
     <ApplicationForm />
     <Footer />
   </div>
