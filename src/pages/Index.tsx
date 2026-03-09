@@ -31,6 +31,7 @@ const AuthorityStatement = () => (
 
 const Index = () => (
   <div className="min-h-screen bg-background text-foreground">
+    <Header />
     <HeroSection />
     <GoldDivider />
     <WhyImperium />
