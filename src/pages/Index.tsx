@@ -1,3 +1,4 @@
+import Header from "@/components/Header";
 import HeroSection from "@/components/HeroSection";
 import GoldDivider from "@/components/GoldDivider";
 import WhyImperium from "@/components/WhyImperium";
