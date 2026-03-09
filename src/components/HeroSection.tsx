@@ -32,7 +32,7 @@ const HeroSection = () => (
         transition={{ duration: 0.7, delay: 0.6 }}
         className="text-lg md:text-xl text-muted-foreground font-light max-w-3xl mx-auto mb-12 leading-relaxed"
       >
-        Imperium Management Agency works with creators who want stronger systems, better structure, and a more professional approach to growth. We operate with discretion, selectivity, and long-term focus.
+        Imperium Management Agency works with creators who want stronger systems, better structure, and a more professional approach to growth. Our partnerships focus on efficiency, discretion, and long-term operational support.
       </motion.p>
 
       <motion.div
