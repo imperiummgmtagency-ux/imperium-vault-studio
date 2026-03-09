@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
+import imperiumLogo from "@/assets/imperium-logo.png";
 
 const Header = () => {
   const [scrolled, setScrolled] = useState(false);
@@ -21,8 +22,8 @@ const Header = () => {
           : "bg-transparent border-b border-transparent"
       }`}
     >
-      <div className="max-w-7xl mx-auto px-6 flex items-center justify-between h-16">
-        {/* Logo */}
+      <div className="max-w-7xl mx-auto px-6 grid grid-cols-3 items-center h-16">
+        {/* Logo text */}
         <a
           href="#"
           className="font-heading text-lg md:text-xl font-semibold tracking-wide text-foreground hover:brightness-125 transition-all duration-300"
@@ -30,13 +31,22 @@ const Header = () => {
           IMPERIUM
         </a>
 
+        {/* Center logo */}
+        <div className="flex justify-center">
+          <a href="#" className="hover:brightness-125 transition-all duration-300">
+            <img src={imperiumLogo} alt="Imperium Management Agency" className="h-10 md:h-12 w-auto" />
+          </a>
+        </div>
+
         {/* CTA */}
-        <a
-          href="#apply"
-          className="px-5 py-2 bg-primary text-primary-foreground font-body text-xs tracking-widest uppercase rounded-sm hover:bg-gold-light transition-colors duration-300"
-        >
-          Request Partnership
-        </a>
+        <div className="flex justify-end">
+          <a
+            href="#apply"
+            className="px-5 py-2 bg-primary text-primary-foreground font-body text-xs tracking-widest uppercase rounded-sm hover:bg-gold-light transition-colors duration-300"
+          >
+            Request Partnership
+          </a>
+        </div>
       </div>
     </motion.header>
   );
