@@ -54,7 +54,7 @@ const Contact = () => {
                 <input type="email" placeholder="Email Address" required className={inputClass} />
                 <input type="text" placeholder="Telegram or Preferred Contact" className={inputClass} />
                 <input type="text" placeholder="Primary Platform" className={inputClass} />
-                <input type="text" placeholder="Monthly Revenue Range" className={inputClass} />
+                <input type="text" placeholder="Current Monthly Revenue Range" className={inputClass} />
               </div>
               <input type="text" placeholder="Platform Links" className={inputClass} />
               <textarea
