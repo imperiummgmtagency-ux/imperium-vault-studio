@@ -54,7 +54,7 @@ const Contact = () => {
                 <input type="email" placeholder="Email Address" required className={inputClass} />
                 <input type="text" placeholder="Telegram or Preferred Contact" className={inputClass} />
                 <input type="text" placeholder="Primary Platform" className={inputClass} />
-                <input type="text" placeholder="Monthly Revenue Range" className={inputClass} />
+                <input type="text" placeholder="Current Monthly Revenue Range" className={inputClass} />
               </div>
               <input type="text" placeholder="Platform Links" className={inputClass} />
               <textarea
@@ -63,7 +63,7 @@ const Contact = () => {
                 className={inputClass + " resize-none"}
               />
               <textarea
-                placeholder="Brief description of your brand"
+                placeholder="Brief description of your creator brand"
                 rows={3}
                 className={inputClass + " resize-none"}
               />
@@ -87,6 +87,28 @@ const Contact = () => {
                 Request Partnership
               </button>
             </form>
+
+            {/* Alternative Contact */}
+            <div className="mt-20 pt-16 border-t border-border">
+              <h2 className="text-xl md:text-2xl font-heading font-semibold mb-4">
+                Alternative Contact
+              </h2>
+              <p className="text-muted-foreground text-sm leading-relaxed mb-4">
+                If you prefer not to complete the application form at this time, you may also reach out directly by email.
+              </p>
+              <p className="text-muted-foreground text-sm leading-relaxed mb-2">
+                Partnership inquiries may be sent to:
+              </p>
+              <a
+                href="mailto:partnerships@imperiummgmtagency.com"
+                className="text-primary hover:text-primary/80 text-sm font-body tracking-wide transition-colors duration-300"
+              >
+                partnerships@imperiummgmtagency.com
+              </a>
+              <p className="text-muted-foreground text-sm leading-relaxed mt-4">
+                Please include relevant details about your creator brand, platform presence, and current stage so the inquiry can be reviewed appropriately.
+              </p>
+            </div>
           </motion.div>
         </div>
       </main>
