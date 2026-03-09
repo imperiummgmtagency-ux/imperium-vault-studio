@@ -33,9 +33,7 @@ const Header = () => {
 
         {/* Center logo */}
         <div className="flex justify-center">
-          <a href="#" className="hover:brightness-125 transition-all duration-300">
-            <img src={imperiumLogo} alt="Imperium Management Agency" className="h-10 md:h-12 w-auto" />
-          </a>
+          <img src={imperiumLogo} alt="Imperium Management Agency" className="h-10 md:h-12 w-auto" />
         </div>
 
         {/* CTA */}
