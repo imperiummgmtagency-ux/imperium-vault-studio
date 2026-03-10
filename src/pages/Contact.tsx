@@ -57,6 +57,7 @@ const HELP_OPTIONS = [
   "Operational support",
   "Scaling an existing creator brand",
   "General guidance",
+  "Other",
 ];
 
 const RequiredAsterisk = () => (
@@ -302,7 +303,8 @@ const Contact = () => {
               {/* Multi-select help areas */}
               <div>
                 <p className="text-sm text-muted-foreground mb-3 font-body">
-                  What areas are you looking to improve or optimize?
+                  What areas are you looking to improve or optimize?{" "}
+                  <span className="text-muted-foreground/60">(optional — select all that apply)</span>
                 </p>
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-2.5">
                   {HELP_OPTIONS.map((area) => {
@@ -323,6 +325,13 @@ const Contact = () => {
                     );
                   })}
                 </div>
+                {helpAreas.includes("Other") && (
+                  <input
+                    type="text"
+                    placeholder="Tell us briefly"
+                    className={inputClass() + " mt-3"}
+                  />
+                )}
               </div>
 
               <textarea
