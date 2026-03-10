@@ -130,7 +130,31 @@ const Contact = () => {
                 <input type="text" placeholder="Full Name" required className={inputClass} />
                 <input type="text" placeholder="Creator / Brand Name" required className={inputClass} />
                 <input type="email" placeholder="Email Address" required className={inputClass} />
-                <input type="text" placeholder="Preferred Contact" required className={inputClass} />
+                <div className="relative">
+                  <select
+                    value={contactMethod}
+                    onChange={(e) => { setContactMethod(e.target.value); setContactDetail(""); }}
+                    required
+                    className={`${selectClass} ${!contactMethod ? "text-muted-foreground" : "text-foreground"}`}
+                  >
+                    <option value="" disabled>Preferred Contact Method</option>
+                    {CONTACT_METHOD_OPTIONS.map((opt) => (
+                      <option key={opt} value={opt} className="bg-secondary text-foreground">{opt}</option>
+                    ))}
+                  </select>
+                </div>
+              </div>
+
+              {contactMethod && (
+                <input
+                  type="text"
+                  placeholder={CONTACT_METHOD_CONFIG[contactMethod]?.placeholder || ""}
+                  required
+                  className={inputClass}
+                  value={contactDetail}
+                  onChange={(e) => setContactDetail(e.target.value)}
+                />
+              )}
 
                 <div className="relative">
                   <select
