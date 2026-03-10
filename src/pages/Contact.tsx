@@ -4,8 +4,26 @@ import Footer from "@/components/Footer";
 import { motion } from "framer-motion";
 import { toast } from "sonner";
 
+const PLATFORM_OPTIONS = [
+  "OnlyFans",
+  "Fansly",
+  "Instagram",
+  "TikTok",
+  "Multiple Platforms",
+  "Other",
+];
+
+const EXPERIENCE_OPTIONS = [
+  "Less than 3 months",
+  "3–12 months",
+  "1–3 years",
+  "3+ years",
+];
+
 const Contact = () => {
   const [agreed, setAgreed] = useState(false);
+  const [platform, setPlatform] = useState("");
+  const [experience, setExperience] = useState("");
 
   const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
@@ -16,10 +34,15 @@ const Contact = () => {
     toast.success("Application submitted. Our team will review it privately.");
     (e.target as HTMLFormElement).reset();
     setAgreed(false);
+    setPlatform("");
+    setExperience("");
   };
 
   const inputClass =
-    "w-full bg-secondary border border-border px-4 py-3 text-sm text-foreground placeholder:text-muted-foreground focus:outline-none focus:border-primary/50 transition-colors duration-300 font-body";
+    "w-full bg-secondary border border-border px-4 py-3 text-sm text-foreground placeholder:text-muted-foreground focus:outline-none focus:border-primary/50 transition-colors duration-300 font-body rounded-none appearance-none";
+
+  const selectClass =
+    "w-full bg-secondary border border-border px-4 py-3 text-sm text-foreground focus:outline-none focus:border-primary/50 transition-colors duration-300 font-body rounded-none appearance-none cursor-pointer";
 
   return (
     <div className="min-h-screen bg-background text-foreground">
@@ -47,23 +70,55 @@ const Contact = () => {
               Please provide accurate information so the inquiry can be reviewed appropriately.
             </p>
 
-            <form onSubmit={handleSubmit} className="space-y-5">
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
+            <form onSubmit={handleSubmit} className="space-y-6">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <input type="text" placeholder="Full Name" required className={inputClass} />
                 <input type="text" placeholder="Creator / Brand Name" required className={inputClass} />
                 <input type="email" placeholder="Email Address" required className={inputClass} />
                 <input type="text" placeholder="Telegram or Preferred Contact" className={inputClass} />
-                <input type="text" placeholder="Primary Platform" className={inputClass} />
-                <input type="text" placeholder="Current Monthly Revenue Range" className={inputClass} />
+
+                <div className="relative">
+                  <select
+                    value={platform}
+                    onChange={(e) => setPlatform(e.target.value)}
+                    className={`${selectClass} ${!platform ? "text-muted-foreground" : "text-foreground"}`}
+                  >
+                    <option value="" disabled>Primary Platform</option>
+                    {PLATFORM_OPTIONS.map((opt) => (
+                      <option key={opt} value={opt} className="bg-secondary text-foreground">{opt}</option>
+                    ))}
+                  </select>
+                </div>
+
+                <input type="text" placeholder="Approximate Monthly Creator Revenue" className={inputClass} />
               </div>
-              <input type="text" placeholder="Platform Links" className={inputClass} />
+
+              <input
+                type="text"
+                placeholder="Creator Profile Links — OnlyFans, Instagram, TikTok, or other platforms"
+                className={inputClass}
+              />
+
+              <div className="relative">
+                <select
+                  value={experience}
+                  onChange={(e) => setExperience(e.target.value)}
+                  className={`${selectClass} ${!experience ? "text-muted-foreground" : "text-foreground"}`}
+                >
+                  <option value="" disabled>How long have you been creating content?</option>
+                  {EXPERIENCE_OPTIONS.map((opt) => (
+                    <option key={opt} value={opt} className="bg-secondary text-foreground">{opt}</option>
+                  ))}
+                </select>
+              </div>
+
               <textarea
-                placeholder="What are you looking for help with?"
+                placeholder="What areas are you looking to improve or optimize?"
                 rows={3}
                 className={inputClass + " resize-none"}
               />
               <textarea
-                placeholder="Brief description of your creator brand"
+                placeholder="Tell us briefly about your creator brand and audience"
                 rows={3}
                 className={inputClass + " resize-none"}
               />
