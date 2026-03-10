@@ -185,7 +185,7 @@ const Contact = () => {
               </div>
 
               <textarea
-                placeholder="Tell us briefly about your creator niche and audience"
+                placeholder="Anything you'd like to add?"
                 rows={3}
                 className={inputClass + " resize-none"}
               />
