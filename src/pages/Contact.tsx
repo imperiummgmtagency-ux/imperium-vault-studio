@@ -141,7 +141,7 @@ const Contact = () => {
 
               <input
                 type="text"
-                placeholder="Creator Profile Links — OnlyFans, Instagram, TikTok or other creator platforms"
+                placeholder="Primary Platform @ — @username"
                 className={inputClass}
               />
 
