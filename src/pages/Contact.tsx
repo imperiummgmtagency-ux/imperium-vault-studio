@@ -331,17 +331,20 @@ const Contact = () => {
                 className={inputClass() + " resize-none"}
               />
 
-              <label className="flex items-start gap-3 cursor-pointer group">
-                <input
-                  type="checkbox"
-                  checked={agreed}
-                  onChange={(e) => setAgreed(e.target.checked)}
-                  className="mt-1 accent-primary"
-                />
-                <span className="text-muted-foreground text-xs leading-relaxed group-hover:text-foreground transition-colors">
-                  I understand Imperium Management Agency reviews applications selectively.
-                </span>
-              </label>
+              <div>
+                <label className="flex items-start gap-3 cursor-pointer group">
+                  <input
+                    type="checkbox"
+                    checked={agreed}
+                    onChange={(e) => setAgreed(e.target.checked)}
+                    className="mt-1 accent-primary"
+                  />
+                  <span className="text-muted-foreground text-xs leading-relaxed group-hover:text-foreground transition-colors">
+                    I understand Imperium Management Agency reviews applications selectively.<RequiredAsterisk />
+                  </span>
+                </label>
+                {submitted && errors.agreed && <FieldError message={errors.agreed} />}
+              </div>
 
               <button
                 type="submit"
