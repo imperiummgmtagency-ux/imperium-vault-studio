@@ -2,6 +2,7 @@ import { useState, FormEvent } from "react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
 import { toast } from "sonner";
 
 const PLATFORM_OPTIONS = [
