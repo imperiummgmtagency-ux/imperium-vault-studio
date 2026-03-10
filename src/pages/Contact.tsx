@@ -15,6 +15,22 @@ const PLATFORM_OPTIONS = [
   "Other",
 ];
 
+const CONTACT_METHOD_OPTIONS = [
+  "Telegram",
+  "WhatsApp",
+  "Instagram",
+  "Email",
+  "Other",
+];
+
+const CONTACT_METHOD_CONFIG: Record<string, { label: string; placeholder: string }> = {
+  Telegram: { label: "Telegram Username", placeholder: "@username" },
+  WhatsApp: { label: "WhatsApp Number", placeholder: "+1 (555) 555-5555" },
+  Instagram: { label: "Instagram Username", placeholder: "@username" },
+  Email: { label: "Email Address", placeholder: "name@email.com" },
+  Other: { label: "Preferred Contact Details", placeholder: "" },
+};
+
 const REVENUE_OPTIONS = [
   "Less than $5k / month",
   "$5k – $10k / month",
@@ -48,6 +64,8 @@ const Contact = () => {
   const [revenue, setRevenue] = useState("");
   const [experience, setExperience] = useState("");
   const [helpAreas, setHelpAreas] = useState<string[]>([]);
+  const [contactMethod, setContactMethod] = useState("");
+  const [contactDetail, setContactDetail] = useState("");
 
   const toggleHelpArea = (area: string) => {
     setHelpAreas((prev) =>
@@ -68,6 +86,8 @@ const Contact = () => {
     setRevenue("");
     setExperience("");
     setHelpAreas([]);
+    setContactMethod("");
+    setContactDetail("");
   };
 
   const inputClass =
@@ -110,7 +130,19 @@ const Contact = () => {
                 <input type="text" placeholder="Full Name" required className={inputClass} />
                 <input type="text" placeholder="Creator / Brand Name" required className={inputClass} />
                 <input type="email" placeholder="Email Address" required className={inputClass} />
-                <input type="text" placeholder="Preferred Contact" required className={inputClass} />
+                <div className="relative">
+                  <select
+                    value={contactMethod}
+                    onChange={(e) => { setContactMethod(e.target.value); setContactDetail(""); }}
+                    required
+                    className={`${selectClass} ${!contactMethod ? "text-muted-foreground" : "text-foreground"}`}
+                  >
+                    <option value="" disabled>Preferred Contact Method</option>
+                    {CONTACT_METHOD_OPTIONS.map((opt) => (
+                      <option key={opt} value={opt} className="bg-secondary text-foreground">{opt}</option>
+                    ))}
+                  </select>
+                </div>
 
                 <div className="relative">
                   <select
@@ -138,6 +170,17 @@ const Contact = () => {
                   </select>
                 </div>
               </div>
+
+              {contactMethod && (
+                <input
+                  type="text"
+                  placeholder={CONTACT_METHOD_CONFIG[contactMethod]?.placeholder || ""}
+                  required
+                  className={inputClass}
+                  value={contactDetail}
+                  onChange={(e) => setContactDetail(e.target.value)}
+                />
+              )}
 
               <input
                 type="text"
