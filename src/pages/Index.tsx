@@ -11,9 +11,9 @@ import ProcessSection from "@/components/ProcessSection";
 import FAQSection from "@/components/FAQSection";
 import CTASection from "@/components/CTASection";
 import PartnershipAvailability from "@/components/PartnershipAvailability";
-import ApplicationForm from "@/components/ApplicationForm";
 import Footer from "@/components/Footer";
 import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
 
 const AuthorityStatement = () => (
   <motion.div
