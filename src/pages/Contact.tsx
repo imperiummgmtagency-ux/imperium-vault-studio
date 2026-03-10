@@ -111,7 +111,9 @@ const Contact = () => {
     }
 
     if (!agreed) {
-      toast.error("Please confirm you understand the selective review process.");
+      newErrors.agreed = "Please confirm before submitting your request.";
+      setErrors({ ...newErrors });
+      toast.error("Please confirm before submitting your request.");
       return;
     }
 
@@ -297,19 +299,6 @@ const Contact = () => {
                 className={inputClass()}
               />
 
-              <div className="relative">
-                <select
-                  value={experience}
-                  onChange={(e) => setExperience(e.target.value)}
-                  className={`${selectClass()} ${!experience ? "text-muted-foreground" : "text-foreground"}`}
-                >
-                  <option value="" disabled>How long have you been creating content?</option>
-                  {EXPERIENCE_OPTIONS.map((opt) => (
-                    <option key={opt} value={opt} className="bg-secondary text-foreground">{opt}</option>
-                  ))}
-                </select>
-              </div>
-
               {/* Multi-select help areas */}
               <div>
                 <p className="text-sm text-muted-foreground mb-3 font-body">
@@ -342,17 +331,20 @@ const Contact = () => {
                 className={inputClass() + " resize-none"}
               />
 
-              <label className="flex items-start gap-3 cursor-pointer group">
-                <input
-                  type="checkbox"
-                  checked={agreed}
-                  onChange={(e) => setAgreed(e.target.checked)}
-                  className="mt-1 accent-primary"
-                />
-                <span className="text-muted-foreground text-xs leading-relaxed group-hover:text-foreground transition-colors">
-                  I understand Imperium Management Agency reviews applications selectively.
-                </span>
-              </label>
+              <div>
+                <label className="flex items-start gap-3 cursor-pointer group">
+                  <input
+                    type="checkbox"
+                    checked={agreed}
+                    onChange={(e) => setAgreed(e.target.checked)}
+                    className="mt-1 accent-primary"
+                  />
+                  <span className="text-muted-foreground text-xs leading-relaxed group-hover:text-foreground transition-colors">
+                    I understand Imperium Management Agency reviews applications selectively.<RequiredAsterisk />
+                  </span>
+                </label>
+                {submitted && errors.agreed && <FieldError message={errors.agreed} />}
+              </div>
 
               <button
                 type="submit"
