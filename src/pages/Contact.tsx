@@ -57,6 +57,7 @@ const HELP_OPTIONS = [
   "Operational support",
   "Scaling an existing creator brand",
   "General guidance",
+  "Other",
 ];
 
 const RequiredAsterisk = () => (
