@@ -51,12 +51,12 @@ const HeroSection = () => (
         transition={{ duration: 0.7, delay: 0.8 }}
         className="flex flex-col sm:flex-row gap-4 justify-center mb-8"
       >
-        <a
-          href="#apply"
+        <Link
+          to="/contact"
           className="px-8 py-4 bg-primary text-primary-foreground font-body text-sm tracking-wider uppercase hover:bg-gold-dark transition-colors duration-300"
         >
           Request Partnership
-        </a>
+        </Link>
         <a
           href="#why"
           className="px-8 py-4 border border-gold-subtle text-foreground font-body text-sm tracking-wider uppercase hover:bg-secondary transition-colors duration-300"
