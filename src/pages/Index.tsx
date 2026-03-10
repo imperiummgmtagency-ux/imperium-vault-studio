@@ -50,11 +50,11 @@ const Index = () => (
     <GoldDivider />
     <ProcessSection />
     <GoldDivider />
+    <PartnershipAvailability />
+    <GoldDivider />
     <FAQSection />
     <GoldDivider />
     <CTASection />
-    <GoldDivider />
-    <PartnershipAvailability />
     <GoldDivider />
     {/* Start the Conversation CTA */}
     <motion.section
