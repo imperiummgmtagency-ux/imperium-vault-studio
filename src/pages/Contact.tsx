@@ -144,7 +144,7 @@ const Contact = () => {
                   </select>
                   <input
                     type="text"
-                    placeholder={contactMethod ? (CONTACT_METHOD_CONFIG[contactMethod]?.placeholder || "Contact details") : "Select method first"}
+                    placeholder={contactMethod ? (CONTACT_METHOD_CONFIG[contactMethod]?.placeholder || "Enter your details") : "Enter your username or number"}
                     required
                     value={contactDetail}
                     onChange={(e) => setContactDetail(e.target.value)}
