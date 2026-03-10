@@ -297,19 +297,6 @@ const Contact = () => {
                 className={inputClass()}
               />
 
-              <div className="relative">
-                <select
-                  value={experience}
-                  onChange={(e) => setExperience(e.target.value)}
-                  className={`${selectClass()} ${!experience ? "text-muted-foreground" : "text-foreground"}`}
-                >
-                  <option value="" disabled>How long have you been creating content?</option>
-                  {EXPERIENCE_OPTIONS.map((opt) => (
-                    <option key={opt} value={opt} className="bg-secondary text-foreground">{opt}</option>
-                  ))}
-                </select>
-              </div>
-
               {/* Multi-select help areas */}
               <div>
                 <p className="text-sm text-muted-foreground mb-3 font-body">
