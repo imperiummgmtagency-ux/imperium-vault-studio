@@ -130,18 +130,26 @@ const Contact = () => {
                 <input type="text" placeholder="Full Name" required className={inputClass} />
                 <input type="text" placeholder="Creator / Brand Name" required className={inputClass} />
                 <input type="email" placeholder="Email Address" required className={inputClass} />
-                <div className="relative">
+                <div className="flex border border-border focus-within:border-primary/60 focus-within:shadow-[0_0_8px_hsl(43_55%_55%/0.15)] transition-all duration-300">
                   <select
                     value={contactMethod}
                     onChange={(e) => { setContactMethod(e.target.value); setContactDetail(""); }}
                     required
-                    className={`${selectClass} ${!contactMethod ? "text-muted-foreground" : "text-foreground"}`}
+                    className={`bg-secondary text-sm font-body px-3 py-3 border-r border-border focus:outline-none appearance-none cursor-pointer shrink-0 ${!contactMethod ? "text-muted-foreground" : "text-foreground"}`}
                   >
-                    <option value="" disabled>Preferred Contact Method</option>
+                    <option value="" disabled>Method</option>
                     {CONTACT_METHOD_OPTIONS.map((opt) => (
                       <option key={opt} value={opt} className="bg-secondary text-foreground">{opt}</option>
                     ))}
                   </select>
+                  <input
+                    type="text"
+                    placeholder={contactMethod ? (CONTACT_METHOD_CONFIG[contactMethod]?.placeholder || "Contact details") : "Select method first"}
+                    required
+                    value={contactDetail}
+                    onChange={(e) => setContactDetail(e.target.value)}
+                    className="flex-1 bg-secondary px-4 py-3 text-sm text-foreground placeholder:text-muted-foreground focus:outline-none font-body min-w-0"
+                  />
                 </div>
 
                 <div className="relative">
@@ -171,16 +179,6 @@ const Contact = () => {
                 </div>
               </div>
 
-              {contactMethod && (
-                <input
-                  type="text"
-                  placeholder={CONTACT_METHOD_CONFIG[contactMethod]?.placeholder || ""}
-                  required
-                  className={inputClass}
-                  value={contactDetail}
-                  onChange={(e) => setContactDetail(e.target.value)}
-                />
-              )}
 
               <input
                 type="text"
