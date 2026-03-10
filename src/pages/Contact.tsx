@@ -143,18 +143,6 @@ const Contact = () => {
                     ))}
                   </select>
                 </div>
-              </div>
-
-              {contactMethod && (
-                <input
-                  type="text"
-                  placeholder={CONTACT_METHOD_CONFIG[contactMethod]?.placeholder || ""}
-                  required
-                  className={inputClass}
-                  value={contactDetail}
-                  onChange={(e) => setContactDetail(e.target.value)}
-                />
-              )}
 
                 <div className="relative">
                   <select
@@ -182,6 +170,17 @@ const Contact = () => {
                   </select>
                 </div>
               </div>
+
+              {contactMethod && (
+                <input
+                  type="text"
+                  placeholder={CONTACT_METHOD_CONFIG[contactMethod]?.placeholder || ""}
+                  required
+                  className={inputClass}
+                  value={contactDetail}
+                  onChange={(e) => setContactDetail(e.target.value)}
+                />
+              )}
 
               <input
                 type="text"
