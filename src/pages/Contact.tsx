@@ -137,7 +137,7 @@ const Contact = () => {
                     required
                     className={`bg-secondary text-sm font-body px-3 py-3 border-r border-border focus:outline-none appearance-none cursor-pointer shrink-0 ${!contactMethod ? "text-muted-foreground" : "text-foreground"}`}
                   >
-                    <option value="" disabled>Method</option>
+                    <option value="" disabled>Contact via</option>
                     {CONTACT_METHOD_OPTIONS.map((opt) => (
                       <option key={opt} value={opt} className="bg-secondary text-foreground">{opt}</option>
                     ))}
