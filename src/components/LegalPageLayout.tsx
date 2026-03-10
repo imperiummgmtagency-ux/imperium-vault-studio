@@ -1,6 +1,7 @@
 import Header from "./Header";
 import Footer from "./Footer";
 import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
 
 interface LegalPageLayoutProps {
   title: string;
