@@ -110,7 +110,7 @@ const Contact = () => {
                 <input type="text" placeholder="Full Name" required className={inputClass} />
                 <input type="text" placeholder="Creator / Brand Name" required className={inputClass} />
                 <input type="email" placeholder="Email Address" required className={inputClass} />
-                <input type="text" placeholder="Telegram or Preferred Contact (optional)" className={inputClass} />
+                <input type="text" placeholder="Preferred Contact" required className={inputClass} />
 
                 <div className="relative">
                   <select
@@ -141,7 +141,7 @@ const Contact = () => {
 
               <input
                 type="text"
-                placeholder="Creator Profile Links — OnlyFans, Instagram, TikTok or other creator platforms"
+                placeholder="Primary Platform @ — @username"
                 className={inputClass}
               />
 
