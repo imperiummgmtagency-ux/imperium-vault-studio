@@ -132,17 +132,20 @@ const Contact = () => {
                 <input type="text" placeholder="Creator / Brand Name" required className={inputClass} />
                 <input type="email" placeholder="Email Address" required className={inputClass} />
                 <div className="flex border border-border focus-within:border-primary/60 focus-within:shadow-[0_0_8px_hsl(43_55%_55%/0.15)] transition-all duration-300">
-                  <select
-                    value={contactMethod}
-                    onChange={(e) => { setContactMethod(e.target.value); setContactDetail(""); }}
-                    required
-                    className={`bg-secondary text-sm font-body px-3 py-3 border-r border-border focus:outline-none appearance-none cursor-pointer shrink-0 ${!contactMethod ? "text-muted-foreground" : "text-foreground"}`}
-                  >
-                    <option value="" disabled>Contact via</option>
-                    {CONTACT_METHOD_OPTIONS.map((opt) => (
-                      <option key={opt} value={opt} className="bg-secondary text-foreground">{opt}</option>
-                    ))}
-                  </select>
+                  <div className="relative shrink-0">
+                    <select
+                      value={contactMethod}
+                      onChange={(e) => { setContactMethod(e.target.value); setContactDetail(""); }}
+                      required
+                      className={`bg-secondary text-sm font-body pl-3 pr-7 py-3 border-r border-border focus:outline-none appearance-none cursor-pointer ${!contactMethod ? "text-muted-foreground" : "text-foreground"}`}
+                    >
+                      <option value="" disabled>Contact via</option>
+                      {CONTACT_METHOD_OPTIONS.map((opt) => (
+                        <option key={opt} value={opt} className="bg-secondary text-foreground">{opt}</option>
+                      ))}
+                    </select>
+                    <ChevronDown className="absolute right-2 top-1/2 -translate-y-1/2 h-3.5 w-3.5 text-muted-foreground pointer-events-none" />
+                  </div>
                   <input
                     type="text"
                     placeholder={contactMethod ? (CONTACT_METHOD_CONFIG[contactMethod]?.placeholder || "Enter your details") : "Enter your username or number"}
