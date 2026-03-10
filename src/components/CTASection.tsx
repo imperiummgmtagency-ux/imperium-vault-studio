@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import SectionWrapper from "./SectionWrapper";
 
 const CTASection = () => (
@@ -9,12 +10,12 @@ const CTASection = () => (
       <p className="text-muted-foreground text-lg leading-relaxed mb-10">
         Imperium Management Agency partners with creators who want stronger infrastructure, clearer systems, and a more professional growth environment. Submit an application and our team will review it privately.
       </p>
-      <a
-        href="#apply"
+      <Link
+        to="/contact"
         className="inline-block px-10 py-4 bg-primary text-primary-foreground font-body text-sm tracking-wider uppercase hover:bg-gold-dark transition-colors duration-300"
       >
         Request Partnership
-      </a>
+      </Link>
     </div>
   </SectionWrapper>
 );
