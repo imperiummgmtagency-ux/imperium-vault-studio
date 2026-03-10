@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
 import imperiumLogo from "@/assets/imperium-logo.png";
 
 const Header = () => {
@@ -35,12 +36,12 @@ const Header = () => {
 
         {/* CTA */}
         <div className="flex justify-end">
-          <a
-            href="#apply"
+          <Link
+            to="/contact"
             className="px-5 py-2 bg-primary text-primary-foreground font-body text-xs tracking-widest uppercase rounded-sm hover:bg-gold-light transition-colors duration-300"
           >
             Request Partnership
-          </a>
+          </Link>
         </div>
       </div>
     </motion.header>
