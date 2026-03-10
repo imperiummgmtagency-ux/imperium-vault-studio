@@ -100,10 +100,10 @@ const Contact = () => {
                 Partnership inquiries may be sent to:
               </p>
               <a
-                href="mailto:partnerships@imperiummgmtagency.com"
+                href="mailto:admin@imperiummgmtagency.com"
                 className="text-primary hover:text-primary/80 text-sm font-body tracking-wide transition-colors duration-300"
               >
-                partnerships@imperiummgmtagency.com
+                admin@imperiummgmtagency.com
               </a>
               <p className="text-muted-foreground text-sm leading-relaxed mt-4">
                 Please include relevant details about your creator brand, platform presence, and current stage so the inquiry can be reviewed appropriately.
