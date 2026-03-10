@@ -8,10 +8,21 @@ import { toast } from "sonner";
 const PLATFORM_OPTIONS = [
   "OnlyFans",
   "Fansly",
+  "Both OnlyFans & Fansly",
   "Instagram",
   "TikTok",
   "Multiple Platforms",
   "Other",
+];
+
+const REVENUE_OPTIONS = [
+  "Less than $5k / month",
+  "$5k – $10k / month",
+  "$10k – $25k / month",
+  "$25k – $50k / month",
+  "$50k – $100k / month",
+  "$100k+ / month",
+  "Prefer not to say",
 ];
 
 const EXPERIENCE_OPTIONS = [
@@ -21,10 +32,28 @@ const EXPERIENCE_OPTIONS = [
   "3+ years",
 ];
 
+const HELP_OPTIONS = [
+  "Account growth strategy",
+  "Chat / fan messaging systems",
+  "Monetization optimization",
+  "Content strategy",
+  "Operational support",
+  "Scaling an existing creator brand",
+  "General guidance",
+];
+
 const Contact = () => {
   const [agreed, setAgreed] = useState(false);
   const [platform, setPlatform] = useState("");
+  const [revenue, setRevenue] = useState("");
   const [experience, setExperience] = useState("");
+  const [helpAreas, setHelpAreas] = useState<string[]>([]);
+
+  const toggleHelpArea = (area: string) => {
+    setHelpAreas((prev) =>
+      prev.includes(area) ? prev.filter((a) => a !== area) : [...prev, area]
+    );
+  };
 
   const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
@@ -36,14 +65,16 @@ const Contact = () => {
     (e.target as HTMLFormElement).reset();
     setAgreed(false);
     setPlatform("");
+    setRevenue("");
     setExperience("");
+    setHelpAreas([]);
   };
 
   const inputClass =
-    "w-full bg-secondary border border-border px-4 py-3 text-sm text-foreground placeholder:text-muted-foreground focus:outline-none focus:border-primary/50 transition-colors duration-300 font-body rounded-none appearance-none";
+    "w-full bg-secondary border border-border px-4 py-3 text-sm text-foreground placeholder:text-muted-foreground focus:outline-none focus:border-primary/60 focus:shadow-[0_0_8px_hsl(43_55%_55%/0.15)] transition-all duration-300 font-body rounded-none appearance-none";
 
   const selectClass =
-    "w-full bg-secondary border border-border px-4 py-3 text-sm text-foreground focus:outline-none focus:border-primary/50 transition-colors duration-300 font-body rounded-none appearance-none cursor-pointer";
+    "w-full bg-secondary border border-border px-4 py-3 text-sm text-foreground focus:outline-none focus:border-primary/60 focus:shadow-[0_0_8px_hsl(43_55%_55%/0.15)] transition-all duration-300 font-body rounded-none appearance-none cursor-pointer";
 
   return (
     <div className="min-h-screen bg-background text-foreground">
@@ -74,12 +105,12 @@ const Contact = () => {
               Please provide accurate information so the inquiry can be reviewed appropriately.
             </p>
 
-            <form onSubmit={handleSubmit} className="space-y-6">
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <form onSubmit={handleSubmit} className="space-y-7">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-7">
                 <input type="text" placeholder="Full Name" required className={inputClass} />
                 <input type="text" placeholder="Creator / Brand Name" required className={inputClass} />
                 <input type="email" placeholder="Email Address" required className={inputClass} />
-                <input type="text" placeholder="Telegram or Preferred Contact" className={inputClass} />
+                <input type="text" placeholder="Telegram or Preferred Contact (optional)" className={inputClass} />
 
                 <div className="relative">
                   <select
@@ -94,12 +125,23 @@ const Contact = () => {
                   </select>
                 </div>
 
-                <input type="text" placeholder="Approximate Monthly Creator Revenue" className={inputClass} />
+                <div className="relative">
+                  <select
+                    value={revenue}
+                    onChange={(e) => setRevenue(e.target.value)}
+                    className={`${selectClass} ${!revenue ? "text-muted-foreground" : "text-foreground"}`}
+                  >
+                    <option value="" disabled>Approximate Monthly Creator Revenue</option>
+                    {REVENUE_OPTIONS.map((opt) => (
+                      <option key={opt} value={opt} className="bg-secondary text-foreground">{opt}</option>
+                    ))}
+                  </select>
+                </div>
               </div>
 
               <input
                 type="text"
-                placeholder="Creator Profile Links — OnlyFans, Instagram, TikTok, or other platforms"
+                placeholder="Creator Profile Links — OnlyFans, Instagram, TikTok or other creator platforms"
                 className={inputClass}
               />
 
@@ -116,13 +158,34 @@ const Contact = () => {
                 </select>
               </div>
 
+              {/* Multi-select help areas */}
+              <div>
+                <p className="text-sm text-muted-foreground mb-3 font-body">
+                  What areas are you looking to improve or optimize?
+                </p>
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-2.5">
+                  {HELP_OPTIONS.map((area) => {
+                    const selected = helpAreas.includes(area);
+                    return (
+                      <button
+                        key={area}
+                        type="button"
+                        onClick={() => toggleHelpArea(area)}
+                        className={`text-left px-4 py-2.5 text-sm font-body border transition-all duration-300 ${
+                          selected
+                            ? "border-primary/60 bg-primary/10 text-foreground shadow-[0_0_8px_hsl(43_55%_55%/0.12)]"
+                            : "border-border bg-secondary text-muted-foreground hover:border-primary/30 hover:text-foreground"
+                        }`}
+                      >
+                        {area}
+                      </button>
+                    );
+                  })}
+                </div>
+              </div>
+
               <textarea
-                placeholder="What areas are you looking to improve or optimize?"
-                rows={3}
-                className={inputClass + " resize-none"}
-              />
-              <textarea
-                placeholder="Tell us briefly about your creator brand and audience"
+                placeholder="Tell us briefly about your creator niche and audience"
                 rows={3}
                 className={inputClass + " resize-none"}
               />
