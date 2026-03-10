@@ -55,6 +55,9 @@ const Contact = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
           >
+            <Link to="/" className="inline-block text-primary hover:text-primary/80 text-sm font-body tracking-wide transition-colors duration-300 mb-7">
+              ← Back to Home
+            </Link>
             <h1 className="text-3xl md:text-5xl font-heading font-semibold text-center mb-4">
               Request a Private Review
             </h1>
