@@ -5,6 +5,7 @@ import Footer from "@/components/Footer";
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 import { toast } from "sonner";
+import { supabase } from "@/integrations/supabase/client";
 
 const PLATFORM_OPTIONS = [
   "OnlyFans",
@@ -42,13 +43,6 @@ const REVENUE_OPTIONS = [
   "Prefer not to say",
 ];
 
-const EXPERIENCE_OPTIONS = [
-  "Less than 3 months",
-  "3–12 months",
-  "1–3 years",
-  "3+ years",
-];
-
 const HELP_OPTIONS = [
   "Account growth strategy",
   "Chat / fan messaging systems",
@@ -72,16 +66,20 @@ const Contact = () => {
   const [agreed, setAgreed] = useState(false);
   const [platform, setPlatform] = useState("");
   const [revenue, setRevenue] = useState("");
-  const [experience, setExperience] = useState("");
   const [helpAreas, setHelpAreas] = useState<string[]>([]);
   const [contactMethod, setContactMethod] = useState("");
   const [contactDetail, setContactDetail] = useState("");
   const [fullName, setFullName] = useState("");
   const [brandName, setBrandName] = useState("");
   const [email, setEmail] = useState("");
+  const [platformHandle, setPlatformHandle] = useState("");
+  const [helpOtherDetail, setHelpOtherDetail] = useState("");
+  const [additionalNotes, setAdditionalNotes] = useState("");
 
   const [errors, setErrors] = useState<Record<string, string>>({});
   const [submitted, setSubmitted] = useState(false);
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [showConfirmation, setShowConfirmation] = useState(false);
 
   const toggleHelpArea = (area: string) => {
     setHelpAreas((prev) =>
@@ -99,7 +97,24 @@ const Contact = () => {
     return newErrors;
   };
 
-  const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
+  const resetForm = () => {
+    setAgreed(false);
+    setPlatform("");
+    setRevenue("");
+    setHelpAreas([]);
+    setContactMethod("");
+    setContactDetail("");
+    setFullName("");
+    setBrandName("");
+    setEmail("");
+    setPlatformHandle("");
+    setHelpOtherDetail("");
+    setAdditionalNotes("");
+    setErrors({});
+    setSubmitted(false);
+  };
+
+  const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     setSubmitted(true);
 
@@ -118,20 +133,35 @@ const Contact = () => {
       return;
     }
 
-    toast.success("Application submitted. Our team will review it privately.");
-    (e.target as HTMLFormElement).reset();
-    setAgreed(false);
-    setPlatform("");
-    setRevenue("");
-    setExperience("");
-    setHelpAreas([]);
-    setContactMethod("");
-    setContactDetail("");
-    setFullName("");
-    setBrandName("");
-    setEmail("");
-    setErrors({});
-    setSubmitted(false);
+    setIsSubmitting(true);
+
+    try {
+      const { error } = await supabase.functions.invoke("submit-contact-form", {
+        body: {
+          full_name: fullName,
+          brand_name: brandName,
+          email,
+          contact_method: contactMethod,
+          contact_detail: contactDetail,
+          platform,
+          platform_handle: platformHandle,
+          revenue,
+          help_areas: helpAreas,
+          help_other_detail: helpOtherDetail,
+          additional_notes: additionalNotes,
+        },
+      });
+
+      if (error) throw error;
+
+      resetForm();
+      setShowConfirmation(true);
+    } catch (err) {
+      console.error("Submission error:", err);
+      toast.error("Something went wrong. Please try again.");
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   const borderError = "border-primary/60 shadow-[0_0_8px_hsl(43_55%_55%/0.15)]";
@@ -145,6 +175,38 @@ const Contact = () => {
     `w-full bg-secondary border px-4 py-3 text-sm text-foreground focus:outline-none focus:border-primary/60 focus:shadow-[0_0_8px_hsl(43_55%_55%/0.15)] transition-all duration-300 font-body rounded-none appearance-none cursor-pointer ${
       submitted && errorKey && errors[errorKey] ? borderError : "border-border"
     }`;
+
+  if (showConfirmation) {
+    return (
+      <div className="min-h-screen bg-background text-foreground">
+        <Header />
+        <main className="pt-32 pb-24 px-6">
+          <div className="max-w-3xl mx-auto">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              className="text-center"
+            >
+              <h1 className="text-3xl md:text-5xl font-heading font-semibold mb-6">
+                Request Received
+              </h1>
+              <p className="text-muted-foreground text-base leading-relaxed max-w-2xl mx-auto mb-8">
+                Your request has been submitted for review. If your brand aligns with our current partnership structure, a member of our team may reach out privately.
+              </p>
+              <Link
+                to="/"
+                className="inline-block text-primary hover:text-primary/80 text-sm font-body tracking-wide transition-colors duration-300"
+              >
+                ← Back to Home
+              </Link>
+            </motion.div>
+          </div>
+        </main>
+        <Footer />
+      </div>
+    );
+  }
 
   return (
     <div className="min-h-screen bg-background text-foreground">
@@ -297,6 +359,8 @@ const Contact = () => {
               <input
                 type="text"
                 placeholder="Primary Platform @ — @username"
+                value={platformHandle}
+                onChange={(e) => setPlatformHandle(e.target.value)}
                 className={inputClass()}
               />
 
@@ -329,6 +393,8 @@ const Contact = () => {
                   <input
                     type="text"
                     placeholder="Tell us briefly"
+                    value={helpOtherDetail}
+                    onChange={(e) => setHelpOtherDetail(e.target.value)}
                     className={inputClass() + " mt-3"}
                   />
                 )}
@@ -337,6 +403,8 @@ const Contact = () => {
               <textarea
                 placeholder="Anything you'd like to add?"
                 rows={3}
+                value={additionalNotes}
+                onChange={(e) => setAdditionalNotes(e.target.value)}
                 className={inputClass() + " resize-none"}
               />
 
@@ -357,9 +425,10 @@ const Contact = () => {
 
               <button
                 type="submit"
-                className="w-full py-4 bg-primary text-primary-foreground font-body text-sm tracking-wider uppercase hover:bg-gold-dark transition-colors duration-300"
+                disabled={isSubmitting}
+                className="w-full py-4 bg-primary text-primary-foreground font-body text-sm tracking-wider uppercase hover:bg-gold-dark transition-colors duration-300 disabled:opacity-50 disabled:cursor-not-allowed"
               >
-                Request Partnership
+                {isSubmitting ? "Submitting..." : "Submit for Review"}
               </button>
             </form>
 
