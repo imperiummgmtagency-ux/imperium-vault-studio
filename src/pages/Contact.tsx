@@ -86,6 +86,8 @@ const Contact = () => {
     setRevenue("");
     setExperience("");
     setHelpAreas([]);
+    setContactMethod("");
+    setContactDetail("");
   };
 
   const inputClass =
