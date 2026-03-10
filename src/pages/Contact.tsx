@@ -15,6 +15,22 @@ const PLATFORM_OPTIONS = [
   "Other",
 ];
 
+const CONTACT_METHOD_OPTIONS = [
+  "Telegram",
+  "WhatsApp",
+  "Instagram",
+  "Email",
+  "Other",
+];
+
+const CONTACT_METHOD_CONFIG: Record<string, { label: string; placeholder: string }> = {
+  Telegram: { label: "Telegram Username", placeholder: "@username" },
+  WhatsApp: { label: "WhatsApp Number", placeholder: "+1 (555) 555-5555" },
+  Instagram: { label: "Instagram Username", placeholder: "@username" },
+  Email: { label: "Email Address", placeholder: "name@email.com" },
+  Other: { label: "Preferred Contact Details", placeholder: "" },
+};
+
 const REVENUE_OPTIONS = [
   "Less than $5k / month",
   "$5k – $10k / month",
