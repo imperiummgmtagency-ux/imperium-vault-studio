@@ -111,7 +111,9 @@ const Contact = () => {
     }
 
     if (!agreed) {
-      toast.error("Please confirm you understand the selective review process.");
+      newErrors.agreed = "Please confirm before submitting your request.";
+      setErrors({ ...newErrors });
+      toast.error("Please confirm before submitting your request.");
       return;
     }
 
