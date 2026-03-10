@@ -59,6 +59,14 @@ const HELP_OPTIONS = [
   "General guidance",
 ];
 
+const RequiredAsterisk = () => (
+  <span className="text-primary ml-1 text-xs">*</span>
+);
+
+const FieldError = ({ message }: { message: string }) => (
+  <p className="text-primary/80 text-xs mt-1.5 font-body">{message}</p>
+);
+
 const Contact = () => {
   const [agreed, setAgreed] = useState(false);
   const [platform, setPlatform] = useState("");
@@ -67,6 +75,12 @@ const Contact = () => {
   const [helpAreas, setHelpAreas] = useState<string[]>([]);
   const [contactMethod, setContactMethod] = useState("");
   const [contactDetail, setContactDetail] = useState("");
+  const [fullName, setFullName] = useState("");
+  const [brandName, setBrandName] = useState("");
+  const [email, setEmail] = useState("");
+
+  const [errors, setErrors] = useState<Record<string, string>>({});
+  const [submitted, setSubmitted] = useState(false);
 
   const toggleHelpArea = (area: string) => {
     setHelpAreas((prev) =>
@@ -74,12 +88,33 @@ const Contact = () => {
     );
   };
 
+  const validate = () => {
+    const newErrors: Record<string, string> = {};
+    if (!fullName.trim()) newErrors.fullName = "Please complete this required field.";
+    if (!email.trim()) newErrors.email = "Please complete this required field.";
+    if (!contactMethod) newErrors.contactMethod = "Please complete this required field.";
+    if (contactMethod && !contactDetail.trim()) newErrors.contactDetail = "Please complete this required field.";
+    if (!platform) newErrors.platform = "Please complete this required field.";
+    return newErrors;
+  };
+
   const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
+    setSubmitted(true);
+
+    const newErrors = validate();
+    setErrors(newErrors);
+
+    if (Object.keys(newErrors).length > 0) {
+      toast.error("Please complete all required fields.");
+      return;
+    }
+
     if (!agreed) {
       toast.error("Please confirm you understand the selective review process.");
       return;
     }
+
     toast.success("Application submitted. Our team will review it privately.");
     (e.target as HTMLFormElement).reset();
     setAgreed(false);
@@ -89,13 +124,24 @@ const Contact = () => {
     setHelpAreas([]);
     setContactMethod("");
     setContactDetail("");
+    setFullName("");
+    setBrandName("");
+    setEmail("");
+    setErrors({});
+    setSubmitted(false);
   };
 
-  const inputClass =
-    "w-full bg-secondary border border-border px-4 py-3 text-sm text-foreground placeholder:text-muted-foreground focus:outline-none focus:border-primary/60 focus:shadow-[0_0_8px_hsl(43_55%_55%/0.15)] transition-all duration-300 font-body rounded-none appearance-none";
+  const borderError = "border-primary/60 shadow-[0_0_8px_hsl(43_55%_55%/0.15)]";
 
-  const selectClass =
-    "w-full bg-secondary border border-border px-4 py-3 text-sm text-foreground focus:outline-none focus:border-primary/60 focus:shadow-[0_0_8px_hsl(43_55%_55%/0.15)] transition-all duration-300 font-body rounded-none appearance-none cursor-pointer";
+  const inputClass = (errorKey?: string) =>
+    `w-full bg-secondary border px-4 py-3 text-sm text-foreground placeholder:text-muted-foreground focus:outline-none focus:border-primary/60 focus:shadow-[0_0_8px_hsl(43_55%_55%/0.15)] transition-all duration-300 font-body rounded-none appearance-none ${
+      submitted && errorKey && errors[errorKey] ? borderError : "border-border"
+    }`;
+
+  const selectClass = (errorKey?: string) =>
+    `w-full bg-secondary border px-4 py-3 text-sm text-foreground focus:outline-none focus:border-primary/60 focus:shadow-[0_0_8px_hsl(43_55%_55%/0.15)] transition-all duration-300 font-body rounded-none appearance-none cursor-pointer ${
+      submitted && errorKey && errors[errorKey] ? borderError : "border-border"
+    }`;
 
   return (
     <div className="min-h-screen bg-background text-foreground">
@@ -128,73 +174,134 @@ const Contact = () => {
 
             <form onSubmit={handleSubmit} className="space-y-7">
               <div className="grid grid-cols-1 md:grid-cols-2 gap-7">
-                <input type="text" placeholder="Full Name" required className={inputClass} />
-                <input type="text" placeholder="Creator / Brand Name" required className={inputClass} />
-                <input type="email" placeholder="Email Address" required className={inputClass} />
-                <div className="flex border border-border focus-within:border-primary/60 focus-within:shadow-[0_0_8px_hsl(43_55%_55%/0.15)] transition-all duration-300">
-                  <div className="relative shrink-0">
-                    <select
-                      value={contactMethod}
-                      onChange={(e) => { setContactMethod(e.target.value); setContactDetail(""); }}
-                      required
-                      className={`bg-secondary text-sm font-body pl-3 pr-7 py-3 border-r border-border focus:outline-none appearance-none cursor-pointer ${!contactMethod ? "text-muted-foreground" : "text-foreground"}`}
-                    >
-                      <option value="" disabled>Contact via</option>
-                      {CONTACT_METHOD_OPTIONS.map((opt) => (
-                        <option key={opt} value={opt} className="bg-secondary text-foreground">{opt}</option>
-                      ))}
-                    </select>
-                    <ChevronDown className="absolute right-2 top-1/2 -translate-y-1/2 h-3.5 w-3.5 text-muted-foreground pointer-events-none" />
-                  </div>
+                {/* Full Name */}
+                <div>
+                  <label className="text-xs text-muted-foreground font-body mb-1.5 block">
+                    Full Name<RequiredAsterisk />
+                  </label>
                   <input
                     type="text"
-                    placeholder={contactMethod ? (CONTACT_METHOD_CONFIG[contactMethod]?.placeholder || "Enter your details") : "Enter your username or number"}
-                    required
-                    value={contactDetail}
-                    onChange={(e) => setContactDetail(e.target.value)}
-                    className="flex-1 bg-secondary px-4 py-3 text-sm text-foreground placeholder:text-muted-foreground focus:outline-none font-body min-w-0"
+                    placeholder="Full Name"
+                    value={fullName}
+                    onChange={(e) => setFullName(e.target.value)}
+                    className={inputClass("fullName")}
+                  />
+                  {submitted && errors.fullName && <FieldError message={errors.fullName} />}
+                </div>
+
+                {/* Brand Name */}
+                <div>
+                  <label className="text-xs text-muted-foreground font-body mb-1.5 block">
+                    Creator / Brand Name
+                  </label>
+                  <input
+                    type="text"
+                    placeholder="Creator / Brand Name"
+                    value={brandName}
+                    onChange={(e) => setBrandName(e.target.value)}
+                    className={inputClass()}
                   />
                 </div>
 
-                <div className="relative">
-                  <select
-                    value={platform}
-                    onChange={(e) => setPlatform(e.target.value)}
-                    className={`${selectClass} ${!platform ? "text-muted-foreground" : "text-foreground"}`}
-                  >
-                    <option value="" disabled>Primary Platform</option>
-                    {PLATFORM_OPTIONS.map((opt) => (
-                      <option key={opt} value={opt} className="bg-secondary text-foreground">{opt}</option>
-                    ))}
-                  </select>
+                {/* Email */}
+                <div>
+                  <label className="text-xs text-muted-foreground font-body mb-1.5 block">
+                    Email Address<RequiredAsterisk />
+                  </label>
+                  <input
+                    type="email"
+                    placeholder="Email Address"
+                    value={email}
+                    onChange={(e) => setEmail(e.target.value)}
+                    className={inputClass("email")}
+                  />
+                  {submitted && errors.email && <FieldError message={errors.email} />}
                 </div>
 
-                <div className="relative">
-                  <select
-                    value={revenue}
-                    onChange={(e) => setRevenue(e.target.value)}
-                    className={`${selectClass} ${!revenue ? "text-muted-foreground" : "text-foreground"}`}
-                  >
-                    <option value="" disabled>Approximate Monthly Creator Revenue</option>
-                    {REVENUE_OPTIONS.map((opt) => (
-                      <option key={opt} value={opt} className="bg-secondary text-foreground">{opt}</option>
-                    ))}
-                  </select>
+                {/* Contact Method */}
+                <div>
+                  <label className="text-xs text-muted-foreground font-body mb-1.5 block">
+                    Contact Method<RequiredAsterisk />
+                  </label>
+                  <div className={`flex border focus-within:border-primary/60 focus-within:shadow-[0_0_8px_hsl(43_55%_55%/0.15)] transition-all duration-300 ${
+                    submitted && (errors.contactMethod || errors.contactDetail) ? borderError : "border-border"
+                  }`}>
+                    <div className="relative shrink-0">
+                      <select
+                        value={contactMethod}
+                        onChange={(e) => { setContactMethod(e.target.value); setContactDetail(""); }}
+                        className={`bg-secondary text-sm font-body pl-3 pr-7 py-3 border-r border-border focus:outline-none appearance-none cursor-pointer ${!contactMethod ? "text-muted-foreground" : "text-foreground"}`}
+                      >
+                        <option value="" disabled>Contact via</option>
+                        {CONTACT_METHOD_OPTIONS.map((opt) => (
+                          <option key={opt} value={opt} className="bg-secondary text-foreground">{opt}</option>
+                        ))}
+                      </select>
+                      <ChevronDown className="absolute right-2 top-1/2 -translate-y-1/2 h-3.5 w-3.5 text-muted-foreground pointer-events-none" />
+                    </div>
+                    <input
+                      type="text"
+                      placeholder={contactMethod ? (CONTACT_METHOD_CONFIG[contactMethod]?.placeholder || "Enter your details") : "Enter your username or number"}
+                      value={contactDetail}
+                      onChange={(e) => setContactDetail(e.target.value)}
+                      className="flex-1 bg-secondary px-4 py-3 text-sm text-foreground placeholder:text-muted-foreground focus:outline-none font-body min-w-0"
+                    />
+                  </div>
+                  {submitted && errors.contactMethod && <FieldError message={errors.contactMethod} />}
+                  {submitted && !errors.contactMethod && errors.contactDetail && <FieldError message={errors.contactDetail} />}
+                </div>
+
+                {/* Primary Platform */}
+                <div>
+                  <label className="text-xs text-muted-foreground font-body mb-1.5 block">
+                    Primary Platform<RequiredAsterisk />
+                  </label>
+                  <div className="relative">
+                    <select
+                      value={platform}
+                      onChange={(e) => setPlatform(e.target.value)}
+                      className={`${selectClass("platform")} ${!platform ? "text-muted-foreground" : "text-foreground"}`}
+                    >
+                      <option value="" disabled>Primary Platform</option>
+                      {PLATFORM_OPTIONS.map((opt) => (
+                        <option key={opt} value={opt} className="bg-secondary text-foreground">{opt}</option>
+                      ))}
+                    </select>
+                  </div>
+                  {submitted && errors.platform && <FieldError message={errors.platform} />}
+                </div>
+
+                {/* Revenue */}
+                <div>
+                  <label className="text-xs text-muted-foreground font-body mb-1.5 block">
+                    Approximate Monthly Revenue
+                  </label>
+                  <div className="relative">
+                    <select
+                      value={revenue}
+                      onChange={(e) => setRevenue(e.target.value)}
+                      className={`${selectClass()} ${!revenue ? "text-muted-foreground" : "text-foreground"}`}
+                    >
+                      <option value="" disabled>Approximate Monthly Creator Revenue</option>
+                      {REVENUE_OPTIONS.map((opt) => (
+                        <option key={opt} value={opt} className="bg-secondary text-foreground">{opt}</option>
+                      ))}
+                    </select>
+                  </div>
                 </div>
               </div>
-
 
               <input
                 type="text"
                 placeholder="Primary Platform @ — @username"
-                className={inputClass}
+                className={inputClass()}
               />
 
               <div className="relative">
                 <select
                   value={experience}
                   onChange={(e) => setExperience(e.target.value)}
-                  className={`${selectClass} ${!experience ? "text-muted-foreground" : "text-foreground"}`}
+                  className={`${selectClass()} ${!experience ? "text-muted-foreground" : "text-foreground"}`}
                 >
                   <option value="" disabled>How long have you been creating content?</option>
                   {EXPERIENCE_OPTIONS.map((opt) => (
@@ -232,7 +339,7 @@ const Contact = () => {
               <textarea
                 placeholder="Anything you'd like to add?"
                 rows={3}
-                className={inputClass + " resize-none"}
+                className={inputClass() + " resize-none"}
               />
 
               <label className="flex items-start gap-3 cursor-pointer group">
