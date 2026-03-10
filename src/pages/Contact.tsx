@@ -64,6 +64,8 @@ const Contact = () => {
   const [revenue, setRevenue] = useState("");
   const [experience, setExperience] = useState("");
   const [helpAreas, setHelpAreas] = useState<string[]>([]);
+  const [contactMethod, setContactMethod] = useState("");
+  const [contactDetail, setContactDetail] = useState("");
 
   const toggleHelpArea = (area: string) => {
     setHelpAreas((prev) =>
