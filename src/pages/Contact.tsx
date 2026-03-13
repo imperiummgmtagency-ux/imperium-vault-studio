@@ -435,7 +435,7 @@ const Contact = () => {
             </form>
 
             {/* Alternative Contact */}
-            <div className="mt-20 pt-16 border-t border-border">
+            <div className="mt-14 md:mt-20 pt-10 md:pt-16 border-t border-border">
               <h2 className="text-xl md:text-2xl font-heading font-semibold mb-4">
                 Alternative Contact
               </h2>
