@@ -428,7 +428,7 @@ const Contact = () => {
               <button
                 type="submit"
                 disabled={isSubmitting}
-                className="w-full py-4 bg-primary text-primary-foreground font-body text-sm tracking-wider uppercase hover:bg-gold-dark transition-colors duration-300 disabled:opacity-50 disabled:cursor-not-allowed"
+                className="w-full py-4 md:py-4 bg-primary text-primary-foreground font-body text-sm tracking-wider uppercase hover:bg-gold-dark transition-colors duration-300 disabled:opacity-50 disabled:cursor-not-allowed min-h-[48px]"
               >
                 {isSubmitting ? "Submitting..." : "Submit for Review"}
               </button>
