@@ -213,7 +213,7 @@ const Contact = () => {
   return (
     <div className="min-h-screen bg-background text-foreground">
       <Header />
-      <main className="pt-32 pb-24 px-6">
+      <main className="pt-24 md:pt-32 pb-16 md:pb-24 px-5 md:px-6">
         <div className="max-w-3xl mx-auto">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
