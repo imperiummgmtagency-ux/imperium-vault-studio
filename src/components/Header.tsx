@@ -39,8 +39,7 @@ const Header = () => {
           to="/contact"
           className="px-3 md:px-5 py-2 bg-primary text-primary-foreground font-body text-[10px] md:text-xs tracking-widest uppercase rounded-sm hover:bg-gold-light transition-colors duration-300"
         >
-          <span className="hidden sm:inline">Request Partnership</span>
-          <span className="sm:hidden">Apply</span>
+          Request Partnership
         </Link>
       </div>
     </motion.header>
