@@ -223,7 +223,7 @@ const Contact = () => {
             <Link to="/" className="inline-block text-primary hover:text-primary/80 text-sm font-body tracking-wide transition-colors duration-300 mb-7">
               ← Back to Home
             </Link>
-            <h1 className="text-3xl md:text-5xl font-heading font-semibold text-center mb-4">
+            <h1 className="text-2xl sm:text-3xl md:text-5xl font-heading font-semibold text-center mb-4">
               Request a Private Review
             </h1>
             <p className="text-muted-foreground text-center text-base leading-relaxed max-w-2xl mx-auto mb-4">
