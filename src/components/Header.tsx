@@ -37,7 +37,7 @@ const Header = () => {
         {/* CTA */}
         <Link
           to="/contact"
-          className="px-3 md:px-5 py-2 bg-primary text-primary-foreground font-body text-[10px] md:text-xs tracking-widest uppercase rounded-sm hover:bg-gold-light transition-colors duration-300"
+          className="px-2.5 md:px-5 py-2 bg-primary text-primary-foreground font-body text-[8px] sm:text-[10px] md:text-xs tracking-widest uppercase rounded-sm hover:bg-gold-light transition-colors duration-300 whitespace-nowrap"
         >
           Request Partnership
         </Link>

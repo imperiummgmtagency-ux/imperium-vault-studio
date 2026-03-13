@@ -52,9 +52,9 @@ const Index = () => (
     <GoldDivider />
     <PartnershipAvailability />
     <GoldDivider />
-    <FAQSection />
-    <GoldDivider />
     <CTASection />
+    <GoldDivider />
+    <FAQSection />
     <GoldDivider />
     {/* Start the Conversation CTA */}
     <motion.section
