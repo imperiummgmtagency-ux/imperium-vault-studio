@@ -297,7 +297,7 @@ const Contact = () => {
                       <select
                         value={contactMethod}
                         onChange={(e) => { setContactMethod(e.target.value); setContactDetail(""); }}
-                        className={`bg-secondary text-sm font-body pl-3 pr-7 py-3 border-r border-border focus:outline-none appearance-none cursor-pointer ${!contactMethod ? "text-muted-foreground" : "text-foreground"}`}
+                        className={`bg-secondary text-base md:text-sm font-body pl-3 pr-7 py-3.5 md:py-3 border-b sm:border-b-0 sm:border-r border-border focus:outline-none appearance-none cursor-pointer w-full sm:w-auto ${!contactMethod ? "text-muted-foreground" : "text-foreground"}`}
                       >
                         <option value="" disabled>Contact via</option>
                         {CONTACT_METHOD_OPTIONS.map((opt) => (
