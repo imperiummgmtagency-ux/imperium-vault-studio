@@ -31,25 +31,16 @@ const HeroSection = () => (
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.7, delay: 0.6 }}
-        className="text-lg md:text-xl text-muted-foreground font-light max-w-3xl mx-auto mb-6 leading-relaxed"
+        className="text-lg md:text-xl text-muted-foreground font-light max-w-2xl mx-auto mb-14 leading-relaxed"
       >
-        Imperium Management Agency works with creators who want stronger systems, better structure, and a more professional operational environment. Our partnerships focus on efficiency, discretion, and long-term creator growth.
-      </motion.p>
-
-      <motion.p
-        initial={{ opacity: 0, y: 15 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.7, delay: 0.7 }}
-        className="text-sm md:text-base text-muted-foreground/70 max-w-2xl mx-auto mb-12 leading-relaxed"
-      >
-        Built for creators operating at scale who want stronger systems behind their brand.
+        Imperium provides the operational systems, monetization strategy, and private support structure behind high-earning creator businesses.
       </motion.p>
 
       <motion.div
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.7, delay: 0.8 }}
-        className="flex flex-col sm:flex-row gap-4 justify-center mb-8"
+        className="flex flex-col sm:flex-row gap-4 justify-center mb-6"
       >
         <Link
           to="/contact"
@@ -68,10 +59,19 @@ const HeroSection = () => (
       <motion.p
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
-        transition={{ duration: 0.7, delay: 1.0 }}
-        className="text-xs tracking-[0.2em] uppercase text-muted-foreground"
+        transition={{ duration: 0.6, delay: 0.9 }}
+        className="text-xs text-muted-foreground/50 font-body mb-16"
       >
-        Private partnerships&nbsp;&nbsp;•&nbsp;&nbsp;Confidential creator relationships&nbsp;&nbsp;•&nbsp;&nbsp;Professional growth infrastructure
+        Built for creators operating at scale.
+      </motion.p>
+
+      <motion.p
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ duration: 0.7, delay: 1.1 }}
+        className="text-xs tracking-[0.2em] uppercase text-muted-foreground/60"
+      >
+        Private Partnerships&nbsp;&nbsp;•&nbsp;&nbsp;Discreet Operations&nbsp;&nbsp;•&nbsp;&nbsp;Creator Infrastructure
       </motion.p>
     </div>
   </section>
