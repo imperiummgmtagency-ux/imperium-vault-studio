@@ -9,21 +9,21 @@ const items = [
 
 const WhyImperium = () => (
   <SectionWrapper id="why">
-    <h2 className="text-3xl md:text-5xl lg:text-6xl font-heading font-semibold text-center mb-6">
+    <h2 className="text-2xl sm:text-3xl md:text-5xl lg:text-6xl font-heading font-semibold text-center mb-4 md:mb-6">
       Serious Creators Need More Than Hype
     </h2>
-    <p className="text-muted-foreground text-center max-w-3xl mx-auto mb-20 text-lg leading-relaxed">
+    <p className="text-muted-foreground text-center max-w-3xl mx-auto mb-12 md:mb-20 text-base md:text-lg leading-relaxed">
       Many creators eventually reach a point where growth requires stronger systems, clearer structure, and more efficient operations. Imperium Management Agency provides the support and operational framework that allows creators to operate at a higher level.
     </p>
     <div className="max-w-3xl mx-auto">
       {items.map((item, i) => (
         <div key={item.num}>
-          <div className="flex items-start gap-8 md:gap-12 py-10">
-            <span className="text-4xl md:text-5xl font-heading font-light text-primary shrink-0 leading-none pt-1">
+          <div className="flex items-start gap-5 md:gap-12 py-7 md:py-10">
+            <span className="text-3xl md:text-5xl font-heading font-light text-primary shrink-0 leading-none pt-1">
               {item.num}
             </span>
             <div>
-              <h3 className="text-xl md:text-2xl font-heading font-semibold text-foreground mb-3">
+              <h3 className="text-lg md:text-2xl font-heading font-semibold text-foreground mb-2 md:mb-3">
                 {item.title}
               </h3>
               <p className="text-muted-foreground leading-relaxed text-sm md:text-base">

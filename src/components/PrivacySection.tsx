@@ -3,10 +3,10 @@ import SectionWrapper from "./SectionWrapper";
 const PrivacySection = () => (
   <SectionWrapper id="privacy">
     <div className="max-w-3xl mx-auto text-center">
-      <h2 className="text-3xl md:text-5xl lg:text-6xl font-heading font-semibold mb-6">
+      <h2 className="text-2xl sm:text-3xl md:text-5xl lg:text-6xl font-heading font-semibold mb-4 md:mb-6">
         Not Everything Valuable Needs To Be Public
       </h2>
-      <div className="space-y-6 text-muted-foreground text-lg leading-relaxed">
+      <div className="space-y-5 md:space-y-6 text-muted-foreground text-base md:text-lg leading-relaxed">
         <p>
           Many creators we work with prefer private partnerships and operate under confidential agreements. Because of this, Imperium does not publicly display creator portfolios, earnings claims, or client lists.
         </p>

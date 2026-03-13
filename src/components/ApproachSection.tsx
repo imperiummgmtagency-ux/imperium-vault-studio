@@ -3,10 +3,10 @@ import SectionWrapper from "./SectionWrapper";
 const ApproachSection = () => (
   <SectionWrapper id="approach">
     <div className="max-w-3xl mx-auto text-center">
-      <h2 className="text-3xl md:text-5xl lg:text-6xl font-heading font-semibold mb-6">
+      <h2 className="text-2xl sm:text-3xl md:text-5xl lg:text-6xl font-heading font-semibold mb-4 md:mb-6">
         Our Approach
       </h2>
-      <div className="space-y-6 text-muted-foreground text-lg leading-relaxed">
+      <div className="space-y-5 md:space-y-6 text-muted-foreground text-base md:text-lg leading-relaxed">
         <p>
           Imperium Management Agency focuses on building structured systems behind creator brands rather than short-term growth tactics.
         </p>
