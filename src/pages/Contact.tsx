@@ -380,7 +380,7 @@ const Contact = () => {
                         key={area}
                         type="button"
                         onClick={() => toggleHelpArea(area)}
-                        className={`text-left px-4 py-2.5 text-sm font-body border transition-all duration-300 ${
+                        className={`text-left px-4 py-3 md:py-2.5 text-sm font-body border transition-all duration-300 ${
                           selected
                             ? "border-primary/60 bg-primary/10 text-foreground shadow-[0_0_8px_hsl(43_55%_55%/0.12)]"
                             : "border-border bg-secondary text-muted-foreground hover:border-primary/30 hover:text-foreground"
