@@ -12,17 +12,17 @@ const faqs = [
 
 const FAQSection = () => (
   <SectionWrapper id="faq">
-    <h2 className="text-3xl md:text-5xl lg:text-6xl font-heading font-semibold text-center mb-16">
+    <h2 className="text-2xl sm:text-3xl md:text-5xl lg:text-6xl font-heading font-semibold text-center mb-10 md:mb-16">
       Frequently Asked Questions
     </h2>
     <div className="max-w-3xl mx-auto">
       <Accordion type="single" collapsible className="space-y-2">
         {faqs.map((faq, i) => (
           <AccordionItem key={i} value={`item-${i}`} className="border-border px-0">
-            <AccordionTrigger className="text-left font-body text-base hover:text-primary transition-colors duration-300 py-5">
+            <AccordionTrigger className="text-left font-body text-sm md:text-base hover:text-primary transition-colors duration-300 py-4 md:py-5">
               {faq.q}
             </AccordionTrigger>
-            <AccordionContent className="text-muted-foreground text-sm leading-relaxed pb-5">
+            <AccordionContent className="text-muted-foreground text-sm leading-relaxed pb-4 md:pb-5">
               {faq.a}
             </AccordionContent>
           </AccordionItem>

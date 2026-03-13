@@ -1,19 +1,19 @@
 import { Link } from "react-router-dom";
 
 const Footer = () => (
-  <footer className="border-t border-border py-16 px-6">
-    <div className="max-w-5xl mx-auto flex flex-col items-center gap-8">
-      <div className="flex flex-col md:flex-row justify-between items-center w-full gap-8">
+  <footer className="border-t border-border py-12 md:py-16 px-5 md:px-6">
+    <div className="max-w-5xl mx-auto flex flex-col items-center gap-6 md:gap-8">
+      <div className="flex flex-col md:flex-row justify-between items-center w-full gap-6 md:gap-8">
         <div className="text-center md:text-left">
-          <h4 className="font-heading text-xl font-semibold text-foreground mb-2">
+          <h4 className="font-heading text-lg md:text-xl font-semibold text-foreground mb-1.5 md:mb-2">
             Imperium Management Agency
           </h4>
           <p className="text-muted-foreground text-xs max-w-xs">
             Private creator management and operational support for serious creators.
           </p>
         </div>
-        <div className="flex gap-8 text-xs text-muted-foreground tracking-wide uppercase">
-          <Link to="/privacy" className="hover:text-primary transition-colors duration-300">Privacy Policy</Link>
+        <div className="flex gap-6 md:gap-8 text-xs text-muted-foreground tracking-wide uppercase">
+          <Link to="/privacy" className="hover:text-primary transition-colors duration-300">Privacy</Link>
           <Link to="/terms" className="hover:text-primary transition-colors duration-300">Terms</Link>
           <Link to="/contact" className="hover:text-primary transition-colors duration-300">Contact</Link>
         </div>

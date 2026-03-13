@@ -169,12 +169,12 @@ const Contact = () => {
   const borderError = "border-primary/60 shadow-[0_0_8px_hsl(43_55%_55%/0.15)]";
 
   const inputClass = (errorKey?: string) =>
-    `w-full bg-secondary border px-4 py-3 text-sm text-foreground placeholder:text-muted-foreground focus:outline-none focus:border-primary/60 focus:shadow-[0_0_8px_hsl(43_55%_55%/0.15)] transition-all duration-300 font-body rounded-none appearance-none ${
+    `w-full bg-secondary border px-4 py-3.5 md:py-3 text-base md:text-sm text-foreground placeholder:text-muted-foreground focus:outline-none focus:border-primary/60 focus:shadow-[0_0_8px_hsl(43_55%_55%/0.15)] transition-all duration-300 font-body rounded-none appearance-none ${
       submitted && errorKey && errors[errorKey] ? borderError : "border-border"
     }`;
 
   const selectClass = (errorKey?: string) =>
-    `w-full bg-secondary border px-4 py-3 text-sm text-foreground focus:outline-none focus:border-primary/60 focus:shadow-[0_0_8px_hsl(43_55%_55%/0.15)] transition-all duration-300 font-body rounded-none appearance-none cursor-pointer ${
+    `w-full bg-secondary border px-4 py-3.5 md:py-3 text-base md:text-sm text-foreground focus:outline-none focus:border-primary/60 focus:shadow-[0_0_8px_hsl(43_55%_55%/0.15)] transition-all duration-300 font-body rounded-none appearance-none cursor-pointer ${
       submitted && errorKey && errors[errorKey] ? borderError : "border-border"
     }`;
 
@@ -182,7 +182,7 @@ const Contact = () => {
     return (
       <div className="min-h-screen bg-background text-foreground">
         <Header />
-        <main className="pt-32 pb-24 px-6">
+        <main className="pt-24 md:pt-32 pb-16 md:pb-24 px-5 md:px-6">
           <div className="max-w-3xl mx-auto">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
@@ -190,7 +190,7 @@ const Contact = () => {
               transition={{ duration: 0.6 }}
               className="text-center"
             >
-              <h1 className="text-3xl md:text-5xl font-heading font-semibold mb-6">
+              <h1 className="text-2xl sm:text-3xl md:text-5xl font-heading font-semibold mb-6">
                 Request Received
               </h1>
               <p className="text-muted-foreground text-base leading-relaxed max-w-2xl mx-auto mb-8">
@@ -213,7 +213,7 @@ const Contact = () => {
   return (
     <div className="min-h-screen bg-background text-foreground">
       <Header />
-      <main className="pt-32 pb-24 px-6">
+      <main className="pt-24 md:pt-32 pb-16 md:pb-24 px-5 md:px-6">
         <div className="max-w-3xl mx-auto">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -223,24 +223,24 @@ const Contact = () => {
             <Link to="/" className="inline-block text-primary hover:text-primary/80 text-sm font-body tracking-wide transition-colors duration-300 mb-7">
               ← Back to Home
             </Link>
-            <h1 className="text-3xl md:text-5xl font-heading font-semibold text-center mb-4">
+            <h1 className="text-2xl sm:text-3xl md:text-5xl font-heading font-semibold text-center mb-4">
               Request a Private Review
             </h1>
-            <p className="text-muted-foreground text-center text-base leading-relaxed max-w-2xl mx-auto mb-4">
+            <p className="text-muted-foreground text-center text-sm md:text-base leading-relaxed max-w-2xl mx-auto mb-3 md:mb-4">
               Imperium Management Agency reviews creator inquiries selectively.
             </p>
-            <p className="text-muted-foreground text-center text-base leading-relaxed max-w-2xl mx-auto mb-4">
+            <p className="text-muted-foreground text-center text-sm md:text-base leading-relaxed max-w-2xl mx-auto mb-3 md:mb-4">
               If your brand aligns with our operational approach and partnership structure, a member of our team may reach out privately to continue the conversation.
             </p>
-            <p className="text-muted-foreground text-center text-base leading-relaxed max-w-2xl mx-auto mb-4">
+            <p className="text-muted-foreground text-center text-sm md:text-base leading-relaxed max-w-2xl mx-auto mb-3 md:mb-4">
               All submissions are reviewed confidentially.
             </p>
-            <p className="text-muted-foreground text-center text-base leading-relaxed max-w-2xl mx-auto mb-16">
+            <p className="text-muted-foreground text-center text-sm md:text-base leading-relaxed max-w-2xl mx-auto mb-10 md:mb-16">
               Please provide accurate information so the inquiry can be reviewed appropriately.
             </p>
 
-            <form onSubmit={handleSubmit} className="space-y-7">
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-7">
+            <form onSubmit={handleSubmit} className="space-y-5 md:space-y-7">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-5 md:gap-7">
                 {/* Full Name */}
                 <div>
                   <label className="text-xs text-muted-foreground font-body mb-1.5 block">
@@ -290,14 +290,14 @@ const Contact = () => {
                   <label className="text-xs text-muted-foreground font-body mb-1.5 block">
                     Contact Method<RequiredAsterisk />
                   </label>
-                  <div className={`flex border focus-within:border-primary/60 focus-within:shadow-[0_0_8px_hsl(43_55%_55%/0.15)] transition-all duration-300 ${
+                  <div className={`flex flex-col sm:flex-row border focus-within:border-primary/60 focus-within:shadow-[0_0_8px_hsl(43_55%_55%/0.15)] transition-all duration-300 ${
                     submitted && (errors.contactMethod || errors.contactDetail) ? borderError : "border-border"
                   }`}>
                     <div className="relative shrink-0">
                       <select
                         value={contactMethod}
                         onChange={(e) => { setContactMethod(e.target.value); setContactDetail(""); }}
-                        className={`bg-secondary text-sm font-body pl-3 pr-7 py-3 border-r border-border focus:outline-none appearance-none cursor-pointer ${!contactMethod ? "text-muted-foreground" : "text-foreground"}`}
+                        className={`bg-secondary text-base md:text-sm font-body pl-3 pr-7 py-3.5 md:py-3 border-b sm:border-b-0 sm:border-r border-border focus:outline-none appearance-none cursor-pointer w-full sm:w-auto ${!contactMethod ? "text-muted-foreground" : "text-foreground"}`}
                       >
                         <option value="" disabled>Contact via</option>
                         {CONTACT_METHOD_OPTIONS.map((opt) => (
@@ -311,7 +311,7 @@ const Contact = () => {
                       placeholder={contactMethod ? (CONTACT_METHOD_CONFIG[contactMethod]?.placeholder || "Enter your details") : "Enter your username or number"}
                       value={contactDetail}
                       onChange={(e) => setContactDetail(e.target.value)}
-                      className="flex-1 bg-secondary px-4 py-3 text-sm text-foreground placeholder:text-muted-foreground focus:outline-none font-body min-w-0"
+                      className="flex-1 bg-secondary px-4 py-3.5 md:py-3 text-base md:text-sm text-foreground placeholder:text-muted-foreground focus:outline-none font-body min-w-0"
                     />
                   </div>
                   {submitted && errors.contactMethod && <FieldError message={errors.contactMethod} />}
@@ -380,7 +380,7 @@ const Contact = () => {
                         key={area}
                         type="button"
                         onClick={() => toggleHelpArea(area)}
-                        className={`text-left px-4 py-2.5 text-sm font-body border transition-all duration-300 ${
+                        className={`text-left px-4 py-3 md:py-2.5 text-sm font-body border transition-all duration-300 ${
                           selected
                             ? "border-primary/60 bg-primary/10 text-foreground shadow-[0_0_8px_hsl(43_55%_55%/0.12)]"
                             : "border-border bg-secondary text-muted-foreground hover:border-primary/30 hover:text-foreground"
@@ -428,14 +428,14 @@ const Contact = () => {
               <button
                 type="submit"
                 disabled={isSubmitting}
-                className="w-full py-4 bg-primary text-primary-foreground font-body text-sm tracking-wider uppercase hover:bg-gold-dark transition-colors duration-300 disabled:opacity-50 disabled:cursor-not-allowed"
+                className="w-full py-4 md:py-4 bg-primary text-primary-foreground font-body text-sm tracking-wider uppercase hover:bg-gold-dark transition-colors duration-300 disabled:opacity-50 disabled:cursor-not-allowed min-h-[48px]"
               >
                 {isSubmitting ? "Submitting..." : "Submit for Review"}
               </button>
             </form>
 
             {/* Alternative Contact */}
-            <div className="mt-20 pt-16 border-t border-border">
+            <div className="mt-14 md:mt-20 pt-10 md:pt-16 border-t border-border">
               <h2 className="text-xl md:text-2xl font-heading font-semibold mb-4">
                 Alternative Contact
               </h2>

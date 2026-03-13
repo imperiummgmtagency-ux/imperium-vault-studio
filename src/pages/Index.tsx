@@ -21,16 +21,16 @@ const AuthorityStatement = () => (
     whileInView={{ opacity: 1 }}
     viewport={{ once: true }}
     transition={{ duration: 0.8 }}
-    className="py-16 px-6 text-center"
+    className="py-10 md:py-16 px-5 md:px-6 text-center"
   >
-    <p className="text-sm md:text-base text-muted-foreground/60 italic tracking-wide max-w-2xl mx-auto">
+    <p className="text-xs md:text-sm text-muted-foreground/60 italic tracking-wide max-w-2xl mx-auto">
       Many creators we work with operate under private agreements and prefer confidential partnerships.
     </p>
   </motion.div>
 );
 
 const Index = () => (
-  <div className="min-h-screen bg-background text-foreground">
+  <div className="min-h-screen bg-background text-foreground overflow-x-hidden">
     <Header />
     <HeroSection />
     <GoldDivider />
@@ -62,24 +62,24 @@ const Index = () => (
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
       transition={{ duration: 0.8 }}
-      className="py-28 px-6 text-center"
+      className="py-20 md:py-28 px-5 md:px-6 text-center"
     >
       <div className="max-w-2xl mx-auto">
-        <h2 className="text-3xl md:text-5xl font-heading font-semibold mb-6">
+        <h2 className="text-2xl sm:text-3xl md:text-5xl font-heading font-semibold mb-4 md:mb-6">
           Start the Conversation
         </h2>
-        <p className="text-muted-foreground text-base leading-relaxed mb-4">
+        <p className="text-muted-foreground text-sm md:text-base leading-relaxed mb-3 md:mb-4">
           Imperium Management Agency reviews creator partnerships selectively.
         </p>
-        <p className="text-muted-foreground text-base leading-relaxed mb-4">
+        <p className="text-muted-foreground text-sm md:text-base leading-relaxed mb-3 md:mb-4">
           If your brand aligns with our operational approach and growth philosophy, you may submit a partnership request for review.
         </p>
-        <p className="text-muted-foreground text-base leading-relaxed mb-10">
+        <p className="text-muted-foreground text-sm md:text-base leading-relaxed mb-8 md:mb-10">
           All inquiries are handled privately.
         </p>
         <Link
           to="/contact"
-          className="inline-block px-10 py-4 bg-primary text-primary-foreground font-body text-sm tracking-wider uppercase hover:bg-gold-dark transition-colors duration-300"
+          className="inline-block w-full sm:w-auto px-10 py-3.5 md:py-4 bg-primary text-primary-foreground font-body text-sm tracking-wider uppercase hover:bg-gold-dark transition-colors duration-300"
         >
           Request Partnership
         </Link>

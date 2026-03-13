@@ -23,26 +23,25 @@ const Header = () => {
           : "bg-transparent border-b border-transparent"
       }`}
     >
-      <div className="max-w-7xl mx-auto px-6 grid grid-cols-3 items-center h-16">
+      <div className="max-w-7xl mx-auto px-4 md:px-6 flex items-center justify-between h-14 md:h-16">
         {/* Logo text */}
-        <span className="font-heading text-lg md:text-xl font-semibold tracking-wide text-foreground">
+        <span className="font-heading text-base md:text-xl font-semibold tracking-wide text-foreground">
           IMPERIUM
         </span>
 
-        {/* Center logo */}
-        <div className="flex justify-center">
-          <img src={imperiumLogo} alt="Imperium Management Agency" className="h-10 md:h-12 w-auto" />
+        {/* Center logo — hidden on very small screens */}
+        <div className="absolute left-1/2 -translate-x-1/2">
+          <img src={imperiumLogo} alt="Imperium Management Agency" className="h-8 md:h-12 w-auto" />
         </div>
 
         {/* CTA */}
-        <div className="flex justify-end">
-          <Link
-            to="/contact"
-            className="px-5 py-2 bg-primary text-primary-foreground font-body text-xs tracking-widest uppercase rounded-sm hover:bg-gold-light transition-colors duration-300"
-          >
-            Request Partnership
-          </Link>
-        </div>
+        <Link
+          to="/contact"
+          className="px-3 md:px-5 py-2 bg-primary text-primary-foreground font-body text-[10px] md:text-xs tracking-widest uppercase rounded-sm hover:bg-gold-light transition-colors duration-300"
+        >
+          <span className="hidden sm:inline">Request Partnership</span>
+          <span className="sm:hidden">Apply</span>
+        </Link>
       </div>
     </motion.header>
   );
