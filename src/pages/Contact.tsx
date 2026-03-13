@@ -311,7 +311,7 @@ const Contact = () => {
                       placeholder={contactMethod ? (CONTACT_METHOD_CONFIG[contactMethod]?.placeholder || "Enter your details") : "Enter your username or number"}
                       value={contactDetail}
                       onChange={(e) => setContactDetail(e.target.value)}
-                      className="flex-1 bg-secondary px-4 py-3 text-sm text-foreground placeholder:text-muted-foreground focus:outline-none font-body min-w-0"
+                      className="flex-1 bg-secondary px-4 py-3.5 md:py-3 text-base md:text-sm text-foreground placeholder:text-muted-foreground focus:outline-none font-body min-w-0"
                     />
                   </div>
                   {submitted && errors.contactMethod && <FieldError message={errors.contactMethod} />}
