@@ -169,7 +169,7 @@ const Contact = () => {
   const borderError = "border-primary/60 shadow-[0_0_8px_hsl(43_55%_55%/0.15)]";
 
   const inputClass = (errorKey?: string) =>
-    `w-full bg-secondary border px-4 py-3 text-sm text-foreground placeholder:text-muted-foreground focus:outline-none focus:border-primary/60 focus:shadow-[0_0_8px_hsl(43_55%_55%/0.15)] transition-all duration-300 font-body rounded-none appearance-none ${
+    `w-full bg-secondary border px-4 py-3.5 md:py-3 text-base md:text-sm text-foreground placeholder:text-muted-foreground focus:outline-none focus:border-primary/60 focus:shadow-[0_0_8px_hsl(43_55%_55%/0.15)] transition-all duration-300 font-body rounded-none appearance-none ${
       submitted && errorKey && errors[errorKey] ? borderError : "border-border"
     }`;
 
