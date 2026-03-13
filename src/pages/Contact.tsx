@@ -190,7 +190,7 @@ const Contact = () => {
               transition={{ duration: 0.6 }}
               className="text-center"
             >
-              <h1 className="text-3xl md:text-5xl font-heading font-semibold mb-6">
+              <h1 className="text-2xl sm:text-3xl md:text-5xl font-heading font-semibold mb-6">
                 Request Received
               </h1>
               <p className="text-muted-foreground text-base leading-relaxed max-w-2xl mx-auto mb-8">
