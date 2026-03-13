@@ -290,7 +290,7 @@ const Contact = () => {
                   <label className="text-xs text-muted-foreground font-body mb-1.5 block">
                     Contact Method<RequiredAsterisk />
                   </label>
-                  <div className={`flex border focus-within:border-primary/60 focus-within:shadow-[0_0_8px_hsl(43_55%_55%/0.15)] transition-all duration-300 ${
+                  <div className={`flex flex-col sm:flex-row border focus-within:border-primary/60 focus-within:shadow-[0_0_8px_hsl(43_55%_55%/0.15)] transition-all duration-300 ${
                     submitted && (errors.contactMethod || errors.contactDetail) ? borderError : "border-border"
                   }`}>
                     <div className="relative shrink-0">
