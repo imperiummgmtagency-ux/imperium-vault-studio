@@ -239,8 +239,8 @@ const Contact = () => {
               Please provide accurate information so the inquiry can be reviewed appropriately.
             </p>
 
-            <form onSubmit={handleSubmit} className="space-y-7">
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-7">
+            <form onSubmit={handleSubmit} className="space-y-5 md:space-y-7">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-5 md:gap-7">
                 {/* Full Name */}
                 <div>
                   <label className="text-xs text-muted-foreground font-body mb-1.5 block">
