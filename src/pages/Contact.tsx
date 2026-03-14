@@ -8,12 +8,14 @@ import { toast } from "sonner";
 import { supabase } from "@/integrations/supabase/client";
 
 const PLATFORM_OPTIONS = [
-  "OnlyFans",
-  "Fansly",
-  "Both OnlyFans & Fansly",
-  "Instagram",
-  "TikTok",
-  "Multiple Platforms",
+  "OnlyFans Management",
+  "Fansly Management",
+  "Fanvue Management",
+  "Instagram Management",
+  "TikTok Management",
+  "X / Twitter Management",
+  "Reddit Management",
+  "Multi-Platform Management",
   "Other",
 ];
 
