@@ -17,22 +17,40 @@ const platforms = [
     href: "/fansly-management",
   },
   {
-    title: "Instagram Growth",
+    title: "Fanvue Management",
     description:
-      "Profile positioning, audience presentation, and funnel-focused strategy designed to strengthen inbound traffic and brand value. Instagram plays a major role in first impressions, reach, and conversion flow when handled correctly.",
-    href: "/instagram-growth-management",
+      "Professional Fanvue management designed to strengthen monetization, improve positioning, and build long-term creator growth with structured systems and strategic direction across the platform.",
+    href: "/fanvue-management",
   },
   {
-    title: "TikTok Growth",
+    title: "Instagram Management",
+    description:
+      "Profile positioning, audience presentation, and funnel-focused strategy designed to strengthen inbound traffic and brand value. Instagram plays a major role in first impressions, reach, and conversion flow when handled correctly.",
+    href: "/instagram-management",
+  },
+  {
+    title: "TikTok Management",
     description:
       "Short-form growth strategy focused on visibility, audience expansion, and conversion potential. We help creators structure content direction and platform presence in a way that supports reach while strengthening overall monetization pathways.",
-    href: "/tiktok-growth-management",
+    href: "/tiktok-management",
+  },
+  {
+    title: "X / Twitter Management",
+    description:
+      "Strategic content direction, audience engagement, and cross-platform traffic flow designed to turn attention into measurable growth. X rewards consistency and personality when managed with purpose.",
+    href: "/x-twitter-management",
+  },
+  {
+    title: "Reddit Management",
+    description:
+      "Targeted visibility and qualified traffic through structured Reddit strategy. We help creators navigate community dynamics and build sustainable posting systems that drive real subscriber growth.",
+    href: "/reddit-management",
   },
   {
     title: "Multi-Platform Management",
     description:
       "For creators operating across multiple channels, we build unified management systems that support traffic flow, brand consistency, monetization, and day-to-day execution across platforms without fragmentation.",
-    href: "/multi-platform-creator-management",
+    href: "/multi-platform-management",
   },
 ];
 
@@ -50,14 +68,14 @@ const PlatformsSection = () => (
       </p>
     </div>
 
-    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-5">
+    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 md:gap-5">
       {platforms.map((platform, i) => (
         <motion.div
           key={platform.title}
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          transition={{ duration: 0.5, delay: i * 0.1 }}
+          transition={{ duration: 0.5, delay: i * 0.08 }}
         >
           <Link
             to={platform.href}
