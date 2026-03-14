@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
+import { ArrowRight } from "lucide-react";
 import SectionWrapper from "./SectionWrapper";
 
 const platforms = [
@@ -57,21 +58,23 @@ const PlatformsSection = () => (
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.5, delay: i * 0.1 }}
-          className="group border border-border bg-card p-6 md:p-8 flex flex-col justify-between hover:border-primary/30 transition-colors duration-300"
         >
-          <div>
-            <h3 className="text-lg md:text-xl font-heading font-semibold mb-3 md:mb-4 text-foreground">
-              {platform.title}
-            </h3>
-            <p className="text-muted-foreground text-xs md:text-sm leading-relaxed mb-6 md:mb-8">
-              {platform.description}
-            </p>
-          </div>
           <Link
             to={platform.href}
-            className="inline-block text-center w-full py-3 border border-primary/30 text-primary text-xs tracking-widest uppercase font-body hover:bg-primary hover:text-primary-foreground transition-colors duration-300"
+            className="group border border-border bg-card p-6 md:p-8 flex flex-col justify-between hover:border-primary/30 transition-all duration-300 h-full cursor-pointer"
           >
-            Learn More
+            <div>
+              <h3 className="text-lg md:text-xl font-heading font-semibold mb-3 md:mb-4 text-foreground group-hover:text-primary transition-colors duration-300">
+                {platform.title}
+              </h3>
+              <p className="text-muted-foreground text-xs md:text-sm leading-relaxed mb-6 md:mb-8">
+                {platform.description}
+              </p>
+            </div>
+            <span className="inline-flex items-center justify-center gap-2 w-full py-3 border border-primary/30 text-primary text-xs tracking-widest uppercase font-body group-hover:bg-primary group-hover:text-primary-foreground transition-colors duration-300">
+              Learn More
+              <ArrowRight size={14} className="transition-transform duration-300 group-hover:translate-x-1" />
+            </span>
           </Link>
         </motion.div>
       ))}

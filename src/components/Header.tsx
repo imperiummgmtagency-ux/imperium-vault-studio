@@ -1,15 +1,37 @@
-import { useState, useEffect } from "react";
-import { motion } from "framer-motion";
+import { useState, useEffect, useRef } from "react";
+import { motion, AnimatePresence } from "framer-motion";
 import { Link } from "react-router-dom";
+import { ChevronDown } from "lucide-react";
 import imperiumLogo from "@/assets/imperium-logo.png";
+
+const platformLinks = [
+  { label: "OnlyFans Management", href: "/onlyfans-management" },
+  { label: "Fansly Management", href: "/fansly-management" },
+  { label: "Instagram Management", href: "/instagram-growth-management" },
+  { label: "TikTok Management", href: "/tiktok-growth-management" },
+  { label: "Multi-Platform Management", href: "/multi-platform-creator-management" },
+];
 
 const Header = () => {
   const [scrolled, setScrolled] = useState(false);
+  const [dropdownOpen, setDropdownOpen] = useState(false);
+  const dropdownRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 40);
     window.addEventListener("scroll", onScroll, { passive: true });
     return () => window.removeEventListener("scroll", onScroll);
+  }, []);
+
+  // Close dropdown on outside click
+  useEffect(() => {
+    const handler = (e: MouseEvent) => {
+      if (dropdownRef.current && !dropdownRef.current.contains(e.target as Node)) {
+        setDropdownOpen(false);
+      }
+    };
+    document.addEventListener("mousedown", handler);
+    return () => document.removeEventListener("mousedown", handler);
   }, []);
 
   return (
@@ -24,13 +46,52 @@ const Header = () => {
       }`}
     >
       <div className="max-w-7xl mx-auto px-4 md:px-6 flex items-center justify-between h-14 md:h-16">
-        {/* Logo text */}
-        <span className="font-heading text-base md:text-xl font-semibold tracking-wide text-foreground">
-          IMPERIUM
-        </span>
+        {/* Logo text + Platforms dropdown */}
+        <div className="flex items-center gap-4 md:gap-6">
+          <Link to="/" className="font-heading text-base md:text-xl font-semibold tracking-wide text-foreground">
+            IMPERIUM
+          </Link>
 
-        {/* Center logo — hidden on very small screens */}
-        <div className="absolute left-1/2 -translate-x-1/2">
+          {/* Platforms dropdown */}
+          <div ref={dropdownRef} className="relative">
+            <button
+              onClick={() => setDropdownOpen((v) => !v)}
+              className="flex items-center gap-1 font-body text-[9px] sm:text-[10px] md:text-xs tracking-widest uppercase text-muted-foreground hover:text-primary transition-colors duration-300"
+            >
+              Platforms
+              <ChevronDown
+                size={12}
+                className={`transition-transform duration-200 ${dropdownOpen ? "rotate-180" : ""}`}
+              />
+            </button>
+
+            <AnimatePresence>
+              {dropdownOpen && (
+                <motion.div
+                  initial={{ opacity: 0, y: 6 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  exit={{ opacity: 0, y: 6 }}
+                  transition={{ duration: 0.2 }}
+                  className="absolute top-full left-0 mt-3 w-56 bg-card border border-border shadow-lg py-2"
+                >
+                  {platformLinks.map((link) => (
+                    <Link
+                      key={link.href}
+                      to={link.href}
+                      onClick={() => setDropdownOpen(false)}
+                      className="block px-5 py-2.5 font-body text-[10px] md:text-xs tracking-wider text-muted-foreground hover:text-primary hover:bg-primary/5 transition-colors duration-200"
+                    >
+                      {link.label}
+                    </Link>
+                  ))}
+                </motion.div>
+              )}
+            </AnimatePresence>
+          </div>
+        </div>
+
+        {/* Center logo */}
+        <div className="absolute left-1/2 -translate-x-1/2 hidden sm:block">
           <img src={imperiumLogo} alt="Imperium Management Agency" className="h-8 md:h-12 w-auto" />
         </div>
 
