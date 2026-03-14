@@ -130,9 +130,12 @@ const PlatformPageLayout = ({
           {[
             { label: "OnlyFans", href: "/onlyfans-management" },
             { label: "Fansly", href: "/fansly-management" },
-            { label: "Instagram", href: "/instagram-growth-management" },
-            { label: "TikTok", href: "/tiktok-growth-management" },
-            { label: "Multi-Platform", href: "/multi-platform-creator-management" },
+            { label: "Fanvue", href: "/fanvue-management" },
+            { label: "Instagram", href: "/instagram-management" },
+            { label: "TikTok", href: "/tiktok-management" },
+            { label: "X / Twitter", href: "/x-twitter-management" },
+            { label: "Reddit", href: "/reddit-management" },
+            { label: "Multi-Platform", href: "/multi-platform-management" },
           ].map((link) => (
             <Link
               key={link.href}
