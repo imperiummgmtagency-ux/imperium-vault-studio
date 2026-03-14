@@ -3,6 +3,7 @@ import HeroSection from "@/components/HeroSection";
 import GoldDivider from "@/components/GoldDivider";
 import WhyImperium from "@/components/WhyImperium";
 import WhatWeHelp from "@/components/WhatWeHelp";
+import PlatformsSection from "@/components/PlatformsSection";
 import OperationalInfrastructure from "@/components/OperationalInfrastructure";
 import ApproachSection from "@/components/ApproachSection";
 import PrivacySection from "@/components/PrivacySection";
