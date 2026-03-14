@@ -85,7 +85,7 @@ const PlatformsSection = () => (
             <span className="absolute top-0 right-0 w-16 h-16 bg-gradient-to-bl from-primary/[0.06] to-transparent pointer-events-none" />
 
             <div className="mb-5">
-              <span className="inline-flex items-center justify-center w-10 h-10 border border-foreground/20 group-hover:border-foreground/50 transition-colors duration-300">
+              <span className="inline-flex items-center justify-center w-10 h-10 border border-primary/20 group-hover:border-primary/50 transition-colors duration-300">
                 {platform.logo ? (
                   <img
                     src={platform.logo}
