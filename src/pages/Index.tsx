@@ -39,6 +39,8 @@ const Index = () => (
     <GoldDivider />
     <WhatWeHelp />
     <GoldDivider />
+    <PlatformsSection />
+    <GoldDivider />
     <OperationalInfrastructure />
     <GoldDivider />
     <ApproachSection />
