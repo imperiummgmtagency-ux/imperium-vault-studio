@@ -7,15 +7,19 @@ import imperiumLogo from "@/assets/imperium-logo.png";
 const platformLinks = [
   { label: "OnlyFans Management", href: "/onlyfans-management" },
   { label: "Fansly Management", href: "/fansly-management" },
-  { label: "Instagram Management", href: "/instagram-growth-management" },
-  { label: "TikTok Management", href: "/tiktok-growth-management" },
-  { label: "Multi-Platform Management", href: "/multi-platform-creator-management" },
+  { label: "Fanvue Management", href: "/fanvue-management" },
+  { label: "Instagram Management", href: "/instagram-management" },
+  { label: "TikTok Management", href: "/tiktok-management" },
+  { label: "X / Twitter Management", href: "/x-twitter-management" },
+  { label: "Reddit Management", href: "/reddit-management" },
+  { label: "Multi-Platform Management", href: "/multi-platform-management" },
 ];
 
 const Header = () => {
   const [scrolled, setScrolled] = useState(false);
   const [dropdownOpen, setDropdownOpen] = useState(false);
   const dropdownRef = useRef<HTMLDivElement>(null);
+  const hoverTimeout = useRef<ReturnType<typeof setTimeout> | null>(null);
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 40);
@@ -33,6 +37,15 @@ const Header = () => {
     document.addEventListener("mousedown", handler);
     return () => document.removeEventListener("mousedown", handler);
   }, []);
+
+  const handleMouseEnter = () => {
+    if (hoverTimeout.current) clearTimeout(hoverTimeout.current);
+    setDropdownOpen(true);
+  };
+
+  const handleMouseLeave = () => {
+    hoverTimeout.current = setTimeout(() => setDropdownOpen(false), 200);
+  };
 
   return (
     <motion.header
@@ -53,33 +66,38 @@ const Header = () => {
           </Link>
 
           {/* Platforms dropdown */}
-          <div ref={dropdownRef} className="relative">
+          <div
+            ref={dropdownRef}
+            className="relative"
+            onMouseEnter={handleMouseEnter}
+            onMouseLeave={handleMouseLeave}
+          >
             <button
               onClick={() => setDropdownOpen((v) => !v)}
-              className="flex items-center gap-1 font-body text-[9px] sm:text-[10px] md:text-xs tracking-widest uppercase text-muted-foreground hover:text-primary transition-colors duration-300"
+              className="flex items-center gap-1 font-body text-[8px] sm:text-[9px] md:text-xs tracking-[0.15em] uppercase text-foreground/70 hover:text-primary transition-colors duration-300 cursor-pointer"
             >
-              Platforms
+              Platforms We Manage
               <ChevronDown
                 size={12}
-                className={`transition-transform duration-200 ${dropdownOpen ? "rotate-180" : ""}`}
+                className={`text-primary/60 transition-transform duration-200 ${dropdownOpen ? "rotate-180" : ""}`}
               />
             </button>
 
             <AnimatePresence>
               {dropdownOpen && (
                 <motion.div
-                  initial={{ opacity: 0, y: 6 }}
+                  initial={{ opacity: 0, y: 8 }}
                   animate={{ opacity: 1, y: 0 }}
-                  exit={{ opacity: 0, y: 6 }}
-                  transition={{ duration: 0.2 }}
-                  className="absolute top-full left-0 mt-3 w-56 bg-card border border-border shadow-lg py-2"
+                  exit={{ opacity: 0, y: 8 }}
+                  transition={{ duration: 0.2, ease: "easeOut" }}
+                  className="absolute top-full left-0 mt-2 w-64 bg-card border border-primary/15 shadow-[0_8px_30px_-8px_hsl(var(--primary)/0.15)] py-2 z-[60]"
                 >
                   {platformLinks.map((link) => (
                     <Link
                       key={link.href}
                       to={link.href}
                       onClick={() => setDropdownOpen(false)}
-                      className="block px-5 py-2.5 font-body text-[10px] md:text-xs tracking-wider text-muted-foreground hover:text-primary hover:bg-primary/5 transition-colors duration-200"
+                      className="block px-5 py-2.5 font-body text-[11px] md:text-xs tracking-wider text-foreground/80 hover:text-primary hover:bg-primary/5 hover:pl-6 transition-all duration-200"
                     >
                       {link.label}
                     </Link>
