@@ -53,7 +53,7 @@ const AboutImperium = () => (
       <meta property="og:image" content={OG_IMAGE} />
       <meta property="og:site_name" content={SITE_NAME} />
       <meta name="twitter:card" content="summary_large_image" />
-      <meta name="twitter:title" content="About Imperium — How We Approach Private Creator Management" />
+      <meta name="twitter:title" content="About Imperium — Private Creator Management Agency" />
       <meta name="twitter:description" content="A selective creator management agency built around operational structure, multi-platform oversight, and long-term brand support." />
       <meta name="twitter:image" content={OG_IMAGE} />
     </Helmet>
