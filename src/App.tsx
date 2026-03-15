@@ -20,6 +20,7 @@ import FacebookManagement from "./pages/FacebookManagement.tsx";
 import SnapchatManagement from "./pages/SnapchatManagement.tsx";
 import AboutImperium from "./pages/AboutImperium.tsx";
 import NotFound from "./pages/NotFound.tsx";
+import ScrollToTop from "./components/ScrollToTop.tsx";
 
 const queryClient = new QueryClient();
 
@@ -30,6 +31,7 @@ const App = () => (
         <Toaster />
         <Sonner />
         <BrowserRouter>
+          <ScrollToTop />
           <Routes>
             <Route path="/" element={<Index />} />
             <Route path="/privacy" element={<Privacy />} />
