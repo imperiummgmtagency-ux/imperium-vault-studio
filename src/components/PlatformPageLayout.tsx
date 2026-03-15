@@ -1,6 +1,7 @@
 import { Helmet } from "react-helmet-async";
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
+import { ArrowLeft } from "lucide-react";
 import Header from "./Header";
 import Footer from "./Footer";
 import GoldDivider from "./GoldDivider";
@@ -44,8 +45,19 @@ const PlatformPageLayout = ({
     </Helmet>
     <Header />
 
+    {/* Secondary nav – Main Page */}
+    <div className="relative z-10 max-w-7xl mx-auto px-4 md:px-6 pt-20 md:pt-24">
+      <Link
+        to="/"
+        className="inline-flex items-center gap-1.5 font-body text-[10px] md:text-xs tracking-[0.15em] uppercase text-foreground/60 hover:text-primary transition-colors duration-300"
+      >
+        <ArrowLeft size={14} className="text-primary/50" />
+        Main Page
+      </Link>
+    </div>
+
     {/* Hero */}
-    <section className="relative pt-28 md:pt-40 pb-16 md:pb-24 px-5 md:px-6">
+    <section className="relative pt-8 md:pt-16 pb-16 md:pb-24 px-5 md:px-6">
       <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_hsl(43_55%_55%_/_0.04)_0%,_transparent_70%)]" />
       <div className="relative z-10 max-w-3xl mx-auto text-center">
         <motion.p
