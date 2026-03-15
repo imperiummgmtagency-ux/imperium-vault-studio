@@ -3,15 +3,15 @@ import PlatformPageLayout from "@/components/PlatformPageLayout";
 const SnapchatManagement = () => (
   <PlatformPageLayout
     metaTitle="Snapchat Management Agency | Imperium Management"
-    metaDescription="Professional Snapchat management for creators focused on direct audience engagement, story-driven content strategy, and platform monetization."
-    heroHeading="Private Snapchat Management Built for Creator Growth"
-    heroCopy="Imperium provides structured Snapchat management for creators who want to leverage direct audience connections, story-driven content, and premium monetization opportunities through one of the most personal social platforms available."
-    section1Heading="What Our Snapchat Management Covers"
-    section1Copy="Our Snapchat management approach is designed to support creators across content strategy, story scheduling, audience engagement, premium content delivery, and subscriber retention. The platform's intimate nature makes it uniquely powerful for creators who want deeper fan relationships and more direct monetization paths."
-    section2Heading="Why Snapchat Management Creates an Advantage"
-    section2Copy="Snapchat offers creators a uniquely personal channel that most management agencies overlook. With the right systems in place, creators can build stronger direct relationships, drive premium content subscriptions, and create an additional revenue stream that complements their broader platform ecosystem."
+    metaDescription="Snapchat management built for continuity, audience touchpoints, and stronger integration into the creator's overall platform ecosystem."
+    heroHeading="Snapchat Management Built for Continuity, Access, and Ecosystem Support"
+    heroCopy="Snapchat can be valuable for creator communication, audience continuity, and platform diversification when it is handled with more structure. Imperium helps integrate Snapchat into the creator's wider ecosystem in a way that supports consistency and long-term usefulness."
+    section1Heading="How We Support Snapchat Management"
+    section1Copy="Our Snapchat management is built around helping creators maintain stronger continuity across audience touchpoints while keeping the platform connected to the broader brand system. Rather than treating Snapchat like an isolated communication channel, we help position it as part of a more organized creator ecosystem that supports audience movement and engagement."
+    section2Heading="Why Communication Platforms Need a Defined Role"
+    section2Copy="Communication-based platforms can become messy or underutilized when they exist without structure. A stronger management model helps ensure Snapchat remains aligned with the creator's positioning, wider audience strategy, and overall platform mix. That creates more clarity, more consistency, and better long-term value from the platform."
     ctaHeading="Apply for Snapchat Management"
-    ctaCopy="We work selectively with creators we believe are a strong fit for our structure and standards. If you are looking for professional support behind your Snapchat presence, apply below."
+    ctaCopy="If you want Snapchat integrated more professionally into your creator platform structure, apply below."
   />
 );
 

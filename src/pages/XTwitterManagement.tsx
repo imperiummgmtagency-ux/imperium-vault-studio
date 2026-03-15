@@ -3,15 +3,15 @@ import PlatformPageLayout from "@/components/PlatformPageLayout";
 const XTwitterManagement = () => (
   <PlatformPageLayout
     metaTitle="X / Twitter Management for Creators | Imperium Management"
-    metaDescription="Strategic X (Twitter) management to grow creator visibility, drive traffic, and build audience engagement that supports monetization."
-    heroHeading="X / Twitter Management for Creators Who Want Real Audience Growth"
-    heroCopy="X remains one of the most powerful platforms for building direct audience relationships, driving traffic, and amplifying brand presence. Imperium helps creators develop a clear content strategy, strengthen engagement, and turn attention into measurable growth across their wider ecosystem."
-    section1Heading="What X / Twitter Management Looks Like"
-    section1Copy="Our support covers content direction, posting strategy, audience engagement, trend awareness, and cross-platform traffic flow. X moves fast and rewards consistency, personality, and strategic timing. We help creators stay relevant, build real connections, and use the platform as a growth engine rather than an afterthought."
-    section2Heading="Attention Is Only Valuable When It Converts"
-    section2Copy="Many creators post on X without a clear plan for where that attention goes. Viral moments fade fast without systems in place to capture and convert interest. A structured approach to X means every post, reply, and interaction supports a bigger picture — stronger brand, more traffic, and better monetization outcomes."
+    metaDescription="Strategic X (Twitter) management to strengthen creator positioning, audience continuity, and ecosystem alignment."
+    heroHeading="X / Twitter Management for Creators Who Need Stronger Ecosystem Positioning"
+    heroCopy="X remains one of the most useful ecosystem platforms for creators when it is managed with intent. Imperium helps creators strengthen platform presence, support audience continuity, and keep X aligned with broader traffic and brand goals."
+    section1Heading="What Our X / Twitter Management Covers"
+    section1Copy="Our approach to X management is centered around creator positioning, audience movement, platform consistency, and maintaining a stronger role for the platform within the wider brand ecosystem. When managed correctly, X helps reinforce visibility, support communication, and keep the creator connected to audience attention in a way that complements larger growth systems."
+    section2Heading="Why Ecosystem Platforms Need Consistency"
+    section2Copy="Platforms like X often become undervalued when they are handled inconsistently or without a defined purpose. That creates missed opportunities in audience continuity, brand visibility, and digital presence. A more structured approach helps the platform contribute to the creator business as part of a coordinated system rather than functioning as an afterthought."
     ctaHeading="Apply for X / Twitter Management"
-    ctaCopy="If you want a more strategic presence on X that drives real results, apply to work with Imperium."
+    ctaCopy="If you want stronger positioning and a more intentional role for X within your creator ecosystem, apply to work with our team."
   />
 );
 

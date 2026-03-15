@@ -6,61 +6,61 @@ import SectionWrapper from "./SectionWrapper";
 const platforms = [
   {
     name: "OnlyFans",
-    description: "Subscription platform management focused on monetization, backend systems, and creator operations.",
+    description: "Structured platform management built around audience support, retention, backend organization, and day-to-day operational consistency for creators who want more serious support behind their brand.",
     href: "/onlyfans-management",
     logo: "/logos/onlyfans.svg",
   },
   {
     name: "Fansly",
-    description: "Strategic platform management for diversification, positioning, and long-term monetization support.",
+    description: "Platform management focused on stronger positioning, better consistency, and a more intentional role within a creator's wider digital ecosystem.",
     href: "/fansly-management",
     logo: "/logos/fansly.svg",
   },
   {
     name: "Fanvue",
-    description: "Management support for creators expanding into additional monetization channels with stronger operational structure.",
+    description: "Professional platform management designed to support diversification, cleaner execution, and stronger integration into the creator's overall growth structure.",
     href: "/fanvue-management",
     logo: "/logos/fanvue.svg",
   },
   {
     name: "Instagram",
-    description: "Audience-facing platform management built around positioning, visibility, and brand presentation.",
+    description: "Instagram management centered on profile presentation, audience-facing positioning, brand cohesion, and stronger movement into the creator's wider ecosystem.",
     href: "/instagram-management",
     logo: "/logos/instagram.svg",
   },
   {
     name: "TikTok",
-    description: "Short-form platform management designed to support reach, momentum, and creator visibility.",
+    description: "TikTok management built to support visibility, content direction, audience expansion, and more structured momentum across the broader creator brand.",
     href: "/tiktok-management",
     logo: "/logos/tiktok.svg",
   },
   {
     name: "X / Twitter",
-    description: "Platform management focused on presence, audience movement, and creator ecosystem support.",
+    description: "X / Twitter management focused on audience continuity, platform presence, creator positioning, and stronger alignment with broader traffic goals.",
     href: "/x-twitter-management",
     logo: "/logos/x-twitter.svg",
   },
   {
     name: "Reddit",
-    description: "Management support for audience discovery, niche visibility, and supplemental traffic flow.",
+    description: "Reddit management approached with more structure and precision to support niche visibility, audience discovery, and ecosystem traffic.",
     href: "/reddit-management",
     logo: "/logos/reddit.svg",
   },
   {
     name: "Facebook",
-    description: "Audience engagement and community growth management for broader brand visibility and cross-platform reach.",
+    description: "Facebook management designed to strengthen broader brand visibility, audience familiarity, and platform consistency as part of a larger creator system.",
     href: "/facebook-management",
     logo: "/logos/facebook.svg",
   },
   {
     name: "Snapchat",
-    description: "Direct audience management focused on story-driven content, premium engagement, and personal monetization.",
+    description: "Snapchat management built around continuity, audience touchpoints, and stronger integration into the creator's overall communication and platform mix.",
     href: "/snapchat-management",
     logo: "/logos/snapchat.svg",
   },
   {
     name: "Multi-Platform",
-    description: "Unified management across multiple channels for creators scaling with more complexity and opportunity.",
+    description: "Unified management across multiple platforms for creators who need stronger coordination, cleaner backend execution, and a more connected growth structure.",
     href: "/multi-platform-management",
     logo: null,
   },
@@ -76,7 +76,7 @@ const PlatformsSection = () => (
         Platforms We Manage
       </h2>
       <p className="text-muted-foreground text-sm md:text-base leading-relaxed max-w-3xl mx-auto">
-        Imperium supports creators across monetization platforms and growth channels with structured management systems designed for consistency, scale, and long-term brand control.
+        Imperium supports creators across the platforms that shape visibility, audience movement, audience development, brand control, and long-term digital positioning. Our management model is designed to bring more structure, consistency, and operational strength to the platforms that matter most, from subscription-based channels to audience-facing social platforms.
       </p>
     </div>
 

@@ -3,15 +3,15 @@ import PlatformPageLayout from "@/components/PlatformPageLayout";
 const OnlyFansManagement = () => (
   <PlatformPageLayout
     metaTitle="OnlyFans Management Agency | Imperium Management"
-    metaDescription="Professional OnlyFans management built for serious creator growth. Monetization optimization, messaging systems, fan conversion, and backend infrastructure."
+    metaDescription="Structured OnlyFans management built for serious creator growth. Backend systems, audience retention, operational consistency, and long-term brand support."
     heroHeading="Private OnlyFans Management Built for Serious Creator Growth"
-    heroCopy="Imperium provides structured OnlyFans management for creators who want stronger monetization, tighter backend systems, and a more serious approach to growth. Our focus is on helping creators improve consistency, optimize earnings, and operate with stronger support across the areas that directly impact performance."
+    heroCopy="Imperium provides structured OnlyFans management for creators who want stronger backend systems, tighter operational support, and a more serious approach to growth. Our focus is on helping creators improve consistency, strengthen execution, and operate with better support across the areas that directly impact performance."
     section1Heading="What Our OnlyFans Management Covers"
-    section1Copy="Our OnlyFans management approach is designed to support both the front-end and the backend of creator operations. Depending on the creator, this can include monetization optimization, messaging systems, fan conversion flow, retention support, operational structure, content coordination, and overall account organization. The goal is not to overcomplicate the brand. It is to help build a cleaner, stronger system around it."
-    section2Heading="Why Professional Management Changes the Game"
-    section2Copy="Many creators reach a point where growth stops being about effort alone and starts becoming about systems. As volume increases, so do the demands tied to content flow, subscriber behavior, monetization opportunities, messaging, and daily account upkeep. Professional management helps reduce disorder, improve execution, and create a more scalable operating structure behind the page."
+    section1Copy="Our OnlyFans management model is built to support both the front end and the backend of creator operations. Depending on the creator, that can include audience retention support, backend organization, operational structure, content coordination, and broader account consistency. As pages grow, so do the moving parts behind them. The role of management is to turn that complexity into a stronger system that allows the creator to operate at a higher level with less friction."
+    section2Heading="Why Serious Creators Need Stronger Systems"
+    section2Copy="At a certain stage, growth stops being about effort alone and starts becoming about infrastructure. More audience activity, more platform complexity, and more operational demand create pressure on every part of the account. Without stronger systems in place, performance becomes harder to control. Professional management helps reduce disorder, strengthen execution, and create a more stable operating structure behind the brand so the creator is not carrying that weight alone."
     ctaHeading="Apply for OnlyFans Management"
-    ctaCopy="We work selectively with creators we believe are a strong fit for our structure and standards. If you are looking for more serious support behind your page, apply below."
+    ctaCopy="We work selectively with creators we believe are a strong fit for our structure and standards. If you are looking for more serious support behind your OnlyFans operation, apply below."
   />
 );
 

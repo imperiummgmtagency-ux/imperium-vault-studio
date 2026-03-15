@@ -3,15 +3,15 @@ import PlatformPageLayout from "@/components/PlatformPageLayout";
 const FacebookManagement = () => (
   <PlatformPageLayout
     metaTitle="Facebook Management Agency | Imperium Management"
-    metaDescription="Professional Facebook management for creators seeking stronger audience engagement, community growth, and cross-platform brand visibility."
-    heroHeading="Strategic Facebook Management for Creator Brands"
-    heroCopy="Imperium provides structured Facebook management for creators looking to expand their reach, strengthen community engagement, and build a more visible brand presence across one of the world's largest platforms."
-    section1Heading="What Our Facebook Management Covers"
-    section1Copy="Our Facebook management approach supports creators across page optimization, content scheduling, audience engagement systems, community moderation, and cross-platform traffic strategies. Whether you are building a new audience or strengthening an existing one, the goal is to create a cleaner, more intentional presence that supports your broader creator brand."
-    section2Heading="Why Facebook Still Matters for Creators"
-    section2Copy="Facebook remains one of the most powerful platforms for audience building, community engagement, and traffic generation. With the right management structure, creators can leverage groups, pages, and content distribution to drive meaningful visibility and funnel attention toward monetization platforms."
+    metaDescription="Facebook management that supports broader brand visibility, audience familiarity, and platform consistency within a larger creator system."
+    heroHeading="Facebook Management That Supports Broader Brand Visibility"
+    heroCopy="Facebook still plays a role in creator visibility, audience familiarity, and overall platform consistency when used correctly. Imperium helps position it as part of a wider management system rather than allowing it to drift outside the creator's core strategy."
+    section1Heading="What Facebook Management Supports"
+    section1Copy="Our Facebook management is focused on maintaining a stronger role for the platform within the broader creator brand. That can include platform presentation, audience-facing consistency, visibility support, and clearer integration with the rest of the creator ecosystem. The goal is not to overcomplicate Facebook, but to ensure it still contributes meaningfully where relevant."
+    section2Heading="Why Overlooked Platforms Still Matter"
+    section2Copy="Not every platform needs to be a primary driver to be valuable. Some channels are most useful when they reinforce brand familiarity, widen digital presence, and support the creator's ecosystem from the outside. Managed correctly, Facebook becomes another controlled asset inside a larger structure instead of a neglected platform with no strategic role."
     ctaHeading="Apply for Facebook Management"
-    ctaCopy="We work selectively with creators we believe are a strong fit for our structure and standards. If you are looking for professional support behind your Facebook presence, apply below."
+    ctaCopy="If you want Facebook positioned more intentionally within your creator ecosystem, apply to work with Imperium."
   />
 );
 

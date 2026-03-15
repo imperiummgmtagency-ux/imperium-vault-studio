@@ -3,15 +3,15 @@ import PlatformPageLayout from "@/components/PlatformPageLayout";
 const FanvueManagement = () => (
   <PlatformPageLayout
     metaTitle="Fanvue Management for Creators | Imperium Management"
-    metaDescription="Professional Fanvue management designed to strengthen monetization, improve positioning, and build long-term creator growth across the platform."
-    heroHeading="Fanvue Management Built for Sustainable Creator Growth"
-    heroCopy="Fanvue offers creators a modern platform with strong tools for monetization and audience engagement. Imperium helps creators take full advantage of Fanvue through better positioning, structured management, and a strategy that supports long-term performance."
-    section1Heading="How We Support Fanvue Creators"
-    section1Copy="Our Fanvue management approach covers monetization strategy, content planning, audience engagement systems, and overall platform positioning. Whether Fanvue is your primary channel or part of a wider ecosystem, we help ensure it is managed with clarity and purpose so it contributes meaningfully to your growth."
-    section2Heading="Platform Diversification Done Right"
-    section2Copy="Adding Fanvue to a creator's portfolio can reduce platform dependency and open new revenue channels. But only when it is treated as a real part of the business. We help creators avoid the common mistakes of neglected secondary platforms by building proper systems, maintaining consistency, and aligning Fanvue with overall brand direction."
+    metaDescription="Professional Fanvue management designed to strengthen diversification, platform execution, and long-term creator growth."
+    heroHeading="Fanvue Management Built for More Intentional Platform Expansion"
+    heroCopy="Imperium helps creators approach Fanvue with stronger structure, cleaner execution, and a more strategic role inside the broader brand ecosystem. When managed properly, Fanvue can support diversification and long-term platform flexibility."
+    section1Heading="What Fanvue Management Looks Like"
+    section1Copy="Our Fanvue management approach is designed to help creators build stronger platform consistency, clearer operational structure, and a more defined role for Fanvue within the business as a whole. Rather than letting it function as a disconnected side channel, we help position it as part of a broader management system that supports brand continuity and scalable execution."
+    section2Heading="Why Additional Channels Need Oversight"
+    section2Copy="Adding new channels can create more opportunity, but it also introduces more complexity. Without clear oversight, extra platforms often become inconsistent, underdeveloped, or disconnected from the creator's overall strategy. A stronger management model helps ensure Fanvue contributes to long-term growth in a way that is organized, intentional, and operationally useful."
     ctaHeading="Apply for Fanvue Management"
-    ctaCopy="If you are looking to build or strengthen your Fanvue presence with professional management support, apply to work with our team."
+    ctaCopy="If you want Fanvue managed as part of a more serious, connected creator system, apply below."
   />
 );
 
