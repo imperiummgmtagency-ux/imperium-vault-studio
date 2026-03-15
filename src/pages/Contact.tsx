@@ -415,13 +415,18 @@ const Contact = () => {
                 )}
               </div>
 
-              <textarea
-                placeholder="Anything you'd like to add?"
-                rows={3}
-                value={additionalNotes}
-                onChange={(e) => setAdditionalNotes(e.target.value)}
-                className={inputClass() + " resize-none"}
-              />
+              <div>
+                <label className="text-xs text-muted-foreground font-body mb-1.5 block">
+                  Additional Notes<OptionalTag />
+                </label>
+                <textarea
+                  placeholder="Anything you'd like to add?"
+                  rows={3}
+                  value={additionalNotes}
+                  onChange={(e) => setAdditionalNotes(e.target.value)}
+                  className={inputClass() + " resize-none"}
+                />
+              </div>
 
               <div>
                 <label className="flex items-start gap-3 cursor-pointer group">
