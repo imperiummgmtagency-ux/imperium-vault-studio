@@ -61,7 +61,7 @@ const AboutSection = () => (
           transition={{ ...fade.transition, delay: 0.1 * i }}
         >
           <div className="flex items-start gap-5 md:gap-12 py-7 md:py-10">
-            <span className="text-3xl md:text-5xl font-heading font-light text-primary shrink-0 leading-none pt-1">
+            <span className="text-3xl md:text-5xl font-body font-extralight tracking-wide text-primary shrink-0 leading-none pt-1">
               {item.num}
             </span>
             <div>

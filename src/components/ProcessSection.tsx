@@ -15,7 +15,7 @@ const ProcessSection = () => (
     <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 md:gap-8">
       {steps.map((s) => (
         <div key={s.num} className="relative">
-          <span className="text-4xl md:text-5xl font-heading font-bold text-primary/20 mb-3 md:mb-4 block">{s.num}</span>
+          <span className="text-4xl md:text-5xl font-body font-extralight tracking-wide text-primary/20 mb-3 md:mb-4 block">{s.num}</span>
           <h3 className="text-base md:text-lg font-heading font-semibold mb-2 md:mb-3">{s.title}</h3>
           <p className="text-muted-foreground text-sm leading-relaxed">{s.desc}</p>
         </div>
