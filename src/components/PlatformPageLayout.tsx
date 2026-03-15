@@ -70,7 +70,7 @@ const PlatformPageLayout = ({
         <title>{metaTitle}</title>
         <meta name="description" content={metaDescription} />
         {canonical && <link rel="canonical" href={canonical} />}
-        <meta property="og:type" content="article" />
+        <meta property="og:type" content="website" />
         <meta property="og:title" content={metaTitle} />
         <meta property="og:description" content={metaDescription} />
         <meta property="og:image" content={OG_IMAGE} />
