@@ -116,6 +116,12 @@ const PlatformPageLayout = ({
         >
           Request Partnership
         </Link>
+        <Link
+          to="/"
+          className="inline-block w-full sm:w-auto px-10 py-3 md:py-3.5 mt-4 border border-primary/30 text-primary/70 font-body text-xs tracking-wider uppercase hover:text-primary hover:border-primary/60 transition-colors duration-300"
+        >
+          Main Page
+        </Link>
       </div>
     </motion.section>
 
