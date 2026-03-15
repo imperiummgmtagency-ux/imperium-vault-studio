@@ -2,7 +2,7 @@ import PlatformPageLayout from "@/components/PlatformPageLayout";
 
 const FanvueManagement = () => (
   <PlatformPageLayout
-    metaTitle="Fanvue Management — Platform Expansion & Brand Continuity | Imperium"
+    metaTitle="Fanvue Management for Creators — Platform Expansion & Brand Growth | Imperium"
     metaDescription="Imperium helps creators manage Fanvue with the same operational rigor as primary platforms. Structured diversification, consistent execution, and integrated brand growth across your full ecosystem."
     canonicalPath="/fanvue-management"
     heroHeading="Give Fanvue a Defined Role Inside Your Creator Business"

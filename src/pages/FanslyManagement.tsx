@@ -2,7 +2,7 @@ import PlatformPageLayout from "@/components/PlatformPageLayout";
 
 const FanslyManagement = () => (
   <PlatformPageLayout
-    metaTitle="Fansly Management — Subscription Diversification Strategy | Imperium"
+    metaTitle="Fansly Management for Creators — Subscription Diversification Strategy | Imperium"
     metaDescription="Expand beyond a single subscription platform. Imperium helps creators position Fansly as a strategic revenue channel with stronger structure, consistency, and purpose within a broader brand ecosystem."
     canonicalPath="/fansly-management"
     heroHeading="Turn Fansly Into a Strategic Revenue Channel, Not a Secondary Afterthought"
