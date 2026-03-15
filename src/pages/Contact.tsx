@@ -366,13 +366,18 @@ const Contact = () => {
                 </div>
               </div>
 
-              <input
-                type="text"
-                placeholder="Primary Platform @ — @username"
-                value={platformHandle}
-                onChange={(e) => setPlatformHandle(e.target.value)}
-                className={inputClass()}
-              />
+              <div>
+                <label className="text-xs text-muted-foreground font-body mb-1.5 block">
+                  Primary Platform Handle<OptionalTag />
+                </label>
+                <input
+                  type="text"
+                  placeholder="@username"
+                  value={platformHandle}
+                  onChange={(e) => setPlatformHandle(e.target.value)}
+                  className={inputClass()}
+                />
+              </div>
 
               {/* Multi-select help areas */}
               <div>
