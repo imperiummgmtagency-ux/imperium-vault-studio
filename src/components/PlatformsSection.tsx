@@ -76,7 +76,7 @@ const PlatformsSection = () => (
         Platforms We Manage
       </h2>
       <p className="text-muted-foreground text-sm md:text-base leading-relaxed max-w-3xl mx-auto">
-        Imperium supports creators across monetization platforms and growth channels with structured management systems designed for consistency, scale, and long-term brand control.
+        Imperium supports creators across the platforms that shape visibility, audience movement, audience development, brand control, and long-term digital positioning. Our management model is designed to bring more structure, consistency, and operational strength to the platforms that matter most, from subscription-based channels to audience-facing social platforms.
       </p>
     </div>
 
