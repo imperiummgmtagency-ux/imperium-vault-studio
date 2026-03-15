@@ -6,6 +6,7 @@ import WhatWeHelp from "@/components/WhatWeHelp";
 import PlatformsSection from "@/components/PlatformsSection";
 import OperationalInfrastructure from "@/components/OperationalInfrastructure";
 import ApproachSection from "@/components/ApproachSection";
+import AboutSection from "@/components/AboutSection";
 import PrivacySection from "@/components/PrivacySection";
 import SelectiveSection from "@/components/SelectiveSection";
 import ProcessSection from "@/components/ProcessSection";
