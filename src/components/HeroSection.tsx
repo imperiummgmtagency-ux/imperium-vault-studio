@@ -62,7 +62,7 @@ const HeroSection = () => (
         transition={{ duration: 0.6, delay: 0.9 }}
         className="text-xs text-muted-foreground/50 font-body mb-12 md:mb-16"
       >
-        Built for creators operating at scale.
+        Private support. Serious infrastructure.
       </motion.p>
 
       <motion.p
