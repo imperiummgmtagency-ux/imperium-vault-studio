@@ -114,7 +114,7 @@ const PlatformPageLayout = ({
           to="/contact"
           className="inline-block w-full sm:w-auto px-10 py-3.5 md:py-4 bg-primary text-primary-foreground font-body text-sm tracking-wider uppercase hover:bg-gold-dark transition-colors duration-300"
         >
-          Apply Now
+          Request Partnership
         </Link>
       </div>
     </motion.section>
