@@ -18,6 +18,7 @@ import RedditManagement from "./pages/RedditManagement.tsx";
 import MultiPlatformManagement from "./pages/MultiPlatformManagement.tsx";
 import FacebookManagement from "./pages/FacebookManagement.tsx";
 import SnapchatManagement from "./pages/SnapchatManagement.tsx";
+import AboutImperium from "./pages/AboutImperium.tsx";
 import NotFound from "./pages/NotFound.tsx";
 
 const queryClient = new QueryClient();
