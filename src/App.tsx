@@ -16,6 +16,8 @@ import TikTokGrowthManagement from "./pages/TikTokGrowthManagement.tsx";
 import XTwitterManagement from "./pages/XTwitterManagement.tsx";
 import RedditManagement from "./pages/RedditManagement.tsx";
 import MultiPlatformManagement from "./pages/MultiPlatformManagement.tsx";
+import FacebookManagement from "./pages/FacebookManagement.tsx";
+import SnapchatManagement from "./pages/SnapchatManagement.tsx";
 import NotFound from "./pages/NotFound.tsx";
 
 const queryClient = new QueryClient();
@@ -41,6 +43,8 @@ const App = () => (
             <Route path="/multi-platform-management" element={<MultiPlatformManagement />} />
             <Route path="/x-twitter-management" element={<XTwitterManagement />} />
             <Route path="/reddit-management" element={<RedditManagement />} />
+            <Route path="/facebook-management" element={<FacebookManagement />} />
+            <Route path="/snapchat-management" element={<SnapchatManagement />} />
             {/* Redirects from old routes */}
             <Route path="/instagram-growth-management" element={<Navigate to="/instagram-management" replace />} />
             <Route path="/tiktok-growth-management" element={<Navigate to="/tiktok-management" replace />} />

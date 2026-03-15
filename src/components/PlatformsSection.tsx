@@ -47,6 +47,18 @@ const platforms = [
     logo: "/logos/reddit.svg",
   },
   {
+    name: "Facebook",
+    description: "Audience engagement and community growth management for broader brand visibility and cross-platform reach.",
+    href: "/facebook-management",
+    logo: "/logos/facebook.svg",
+  },
+  {
+    name: "Snapchat",
+    description: "Direct audience management focused on story-driven content, premium engagement, and personal monetization.",
+    href: "/snapchat-management",
+    logo: "/logos/snapchat.svg",
+  },
+  {
     name: "Multi-Platform",
     description: "Unified management across multiple channels for creators scaling with more complexity and opportunity.",
     href: "/multi-platform-management",
