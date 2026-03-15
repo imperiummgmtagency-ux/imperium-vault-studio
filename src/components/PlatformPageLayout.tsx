@@ -135,6 +135,8 @@ const PlatformPageLayout = ({
             { label: "TikTok", href: "/tiktok-management" },
             { label: "X / Twitter", href: "/x-twitter-management" },
             { label: "Reddit", href: "/reddit-management" },
+            { label: "Facebook", href: "/facebook-management" },
+            { label: "Snapchat", href: "/snapchat-management" },
             { label: "Multi-Platform", href: "/multi-platform-management" },
           ].map((link) => (
             <Link
