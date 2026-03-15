@@ -38,6 +38,8 @@ const Index = () => (
     <GoldDivider />
     <WhyImperium />
     <GoldDivider />
+    <AboutSection />
+    <GoldDivider />
     <WhatWeHelp />
     <GoldDivider />
     <PlatformsSection />

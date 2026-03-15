@@ -46,6 +46,7 @@ const App = () => (
             <Route path="/reddit-management" element={<RedditManagement />} />
             <Route path="/facebook-management" element={<FacebookManagement />} />
             <Route path="/snapchat-management" element={<SnapchatManagement />} />
+            <Route path="/about-imperium" element={<AboutImperium />} />
             {/* Redirects from old routes */}
             <Route path="/instagram-growth-management" element={<Navigate to="/instagram-management" replace />} />
             <Route path="/tiktok-growth-management" element={<Navigate to="/tiktok-management" replace />} />
