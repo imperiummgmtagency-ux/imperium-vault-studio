@@ -226,11 +226,16 @@ const Contact = () => {
         <title>Request Creator Management Partnership — Imperium Management Agency</title>
         <meta name="description" content="Submit a confidential partnership inquiry to Imperium Management Agency. We review creator applications selectively and respond privately to aligned brands." />
         <link rel="canonical" href={`${SITE_URL}/contact`} />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content={`${SITE_URL}/contact`} />
         <meta property="og:title" content="Request Creator Management Partnership — Imperium" />
         <meta property="og:description" content="Submit a confidential partnership inquiry. We review creator applications selectively and respond privately." />
         <meta property="og:image" content={OG_IMAGE} />
         <meta property="og:site_name" content={SITE_NAME} />
-        <meta name="twitter:card" content="summary" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Request Creator Management Partnership — Imperium" />
+        <meta name="twitter:description" content="Submit a confidential partnership inquiry. We review creator applications selectively and respond privately." />
+        <meta name="twitter:image" content={OG_IMAGE} />
       </Helmet>
       <Header />
       <main className="pt-24 md:pt-32 pb-16 md:pb-24 px-5 md:px-6">
