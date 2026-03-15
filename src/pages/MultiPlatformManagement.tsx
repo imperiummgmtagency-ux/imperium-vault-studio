@@ -2,8 +2,9 @@ import PlatformPageLayout from "@/components/PlatformPageLayout";
 
 const MultiPlatformManagement = () => (
   <PlatformPageLayout
-    metaTitle="Multi-Platform Creator Management | Imperium Management"
-    metaDescription="Unified management for creators scaling across multiple platforms. Coordination, consistency, and connected growth structure."
+    metaTitle="Multi-Platform Creator Management | Imperium Management Agency"
+    metaDescription="Unified multi-platform management for creators scaling across channels. Coordination, consistency, and connected growth infrastructure from Imperium."
+    canonicalPath="/multi-platform-management"
     heroHeading="Unified Multi-Platform Management for Creators Scaling Across Channels"
     heroCopy="Creators operating across multiple platforms need more than scattered support. Imperium builds connected management systems that help unify traffic channels, audience touchpoints, and backend operations under a more controlled structure."
     section1Heading="What Multi-Platform Management Includes"

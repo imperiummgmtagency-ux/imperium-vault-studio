@@ -2,8 +2,9 @@ import PlatformPageLayout from "@/components/PlatformPageLayout";
 
 const InstagramGrowthManagement = () => (
   <PlatformPageLayout
-    metaTitle="Instagram Growth Strategy for Creators | Imperium Management"
-    metaDescription="Instagram management that supports creator positioning, audience quality, and stronger brand presentation across the digital ecosystem."
+    metaTitle="Instagram Management for Creators | Imperium Management Agency"
+    metaDescription="Instagram management that strengthens creator positioning, audience quality, and brand presentation. Top-of-funnel strategy and ecosystem alignment from Imperium."
+    canonicalPath="/instagram-management"
     heroHeading="Instagram Management That Strengthens Positioning and First Impressions"
     heroCopy="Instagram is often the first touchpoint between a creator and a potential audience member. Imperium helps creators strengthen that first impression through cleaner presentation, stronger positioning, and a more intentional role for Instagram within the wider ecosystem."
     section1Heading="What Our Instagram Management Supports"
