@@ -437,7 +437,7 @@ const Contact = () => {
                     className="mt-1 accent-primary"
                   />
                   <span className="text-muted-foreground text-xs leading-relaxed group-hover:text-foreground transition-colors">
-                    I understand Imperium Management Agency reviews applications selectively.<RequiredAsterisk />
+                    I confirm that I am 18 years of age or older, that the information provided is accurate to the best of my knowledge, and that submitting this form does not guarantee acceptance or partnership.<RequiredAsterisk />
                   </span>
                 </label>
                 {submitted && errors.agreed && <FieldError message={errors.agreed} />}
