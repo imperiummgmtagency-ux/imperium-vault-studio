@@ -40,7 +40,7 @@ const sections = [
 const AboutImperium = () => (
   <div className="min-h-screen bg-background text-foreground overflow-x-hidden">
     <Helmet>
-      <title>About Imperium — How We Approach Private Creator Management</title>
+      <title>About Imperium — Private Creator Management Agency</title>
       <meta
         name="description"
         content="Imperium is a selective creator management agency built around operational structure, multi-platform oversight, and long-term brand support. Learn how we work, who we partner with, and why privacy is central to our model."

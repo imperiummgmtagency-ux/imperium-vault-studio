@@ -223,7 +223,7 @@ const Contact = () => {
   return (
     <div className="min-h-screen bg-background text-foreground">
       <Helmet>
-        <title>Request a Partnership — Apply to Work With Imperium</title>
+        <title>Request Creator Management Partnership — Imperium Management Agency</title>
         <meta name="description" content="Submit a confidential partnership inquiry to Imperium Management Agency. We review creator applications selectively and respond privately to aligned brands." />
         <link rel="canonical" href={`${SITE_URL}/contact`} />
         <meta property="og:title" content="Request a Partnership — Imperium Management Agency" />
