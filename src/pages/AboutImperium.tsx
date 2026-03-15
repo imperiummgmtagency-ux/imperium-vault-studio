@@ -48,7 +48,7 @@ const AboutImperium = () => (
       <link rel="canonical" href={`${SITE_URL}/about-imperium`} />
       <meta property="og:type" content="website" />
       <meta property="og:url" content={`${SITE_URL}/about-imperium`} />
-      <meta property="og:title" content="About Imperium — How We Approach Private Creator Management" />
+      <meta property="og:title" content="About Imperium — Private Creator Management Agency" />
       <meta property="og:description" content="A selective creator management agency built around operational structure, multi-platform oversight, and long-term brand support." />
       <meta property="og:image" content={OG_IMAGE} />
       <meta property="og:site_name" content={SITE_NAME} />

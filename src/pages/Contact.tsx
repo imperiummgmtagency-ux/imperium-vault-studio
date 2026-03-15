@@ -226,7 +226,7 @@ const Contact = () => {
         <title>Request Creator Management Partnership — Imperium Management Agency</title>
         <meta name="description" content="Submit a confidential partnership inquiry to Imperium Management Agency. We review creator applications selectively and respond privately to aligned brands." />
         <link rel="canonical" href={`${SITE_URL}/contact`} />
-        <meta property="og:title" content="Request a Partnership — Imperium Management Agency" />
+        <meta property="og:title" content="Request Creator Management Partnership — Imperium" />
         <meta property="og:description" content="Submit a confidential partnership inquiry. We review creator applications selectively and respond privately." />
         <meta property="og:image" content={OG_IMAGE} />
         <meta property="og:site_name" content={SITE_NAME} />
