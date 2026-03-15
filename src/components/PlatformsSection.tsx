@@ -102,6 +102,8 @@ const PlatformsSection = () => (
                   <img
                     src={platform.logo}
                     alt={`${platform.name} logo`}
+                    loading="lazy"
+                    decoding="async"
                     className="w-5 h-5 object-contain opacity-80 group-hover:opacity-100 transition-opacity duration-300"
                   />
                 ) : (
