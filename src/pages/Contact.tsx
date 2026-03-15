@@ -267,7 +267,7 @@ const Contact = () => {
                 {/* Brand Name */}
                 <div>
                   <label className="text-xs text-muted-foreground font-body mb-1.5 block">
-                    Creator / Brand Name
+                    Creator / Brand Name<OptionalTag />
                   </label>
                   <input
                     type="text"
