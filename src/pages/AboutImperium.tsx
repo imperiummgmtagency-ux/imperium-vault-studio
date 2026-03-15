@@ -40,21 +40,21 @@ const sections = [
 const AboutImperium = () => (
   <div className="min-h-screen bg-background text-foreground overflow-x-hidden">
     <Helmet>
-      <title>About Imperium | Private Creator Management Agency</title>
+      <title>About Imperium — How We Approach Private Creator Management</title>
       <meta
         name="description"
-        content="Learn about Imperium Management Agency — a private, selective creator management company built around operational structure, discretion, multi-platform oversight, and serious long-term support for creators."
+        content="Imperium is a selective creator management agency built around operational structure, multi-platform oversight, and long-term brand support. Learn how we work, who we partner with, and why privacy is central to our model."
       />
       <link rel="canonical" href={`${SITE_URL}/about-imperium`} />
       <meta property="og:type" content="website" />
       <meta property="og:url" content={`${SITE_URL}/about-imperium`} />
-      <meta property="og:title" content="About Imperium | Private Creator Management Agency" />
-      <meta property="og:description" content="A private, selective creator management company built around structure, discretion, and serious long-term support." />
+      <meta property="og:title" content="About Imperium — How We Approach Private Creator Management" />
+      <meta property="og:description" content="A selective creator management agency built around operational structure, multi-platform oversight, and long-term brand support." />
       <meta property="og:image" content={OG_IMAGE} />
       <meta property="og:site_name" content={SITE_NAME} />
       <meta name="twitter:card" content="summary_large_image" />
-      <meta name="twitter:title" content="About Imperium | Private Creator Management Agency" />
-      <meta name="twitter:description" content="A private, selective creator management company built around structure, discretion, and serious long-term support." />
+      <meta name="twitter:title" content="About Imperium — How We Approach Private Creator Management" />
+      <meta name="twitter:description" content="A selective creator management agency built around operational structure, multi-platform oversight, and long-term brand support." />
       <meta name="twitter:image" content={OG_IMAGE} />
     </Helmet>
     <Header />

@@ -119,26 +119,26 @@ const AuthorityStatement = () => (
 const Index = () => (
   <div className="min-h-screen bg-background text-foreground overflow-x-hidden">
     <Helmet>
-      <title>Imperium Management Agency | Private Creator Management &amp; Multi-Platform Support</title>
+      <title>Imperium Management Agency — Private Creator Management &amp; Multi-Platform Infrastructure</title>
       <meta
         name="description"
-        content="Imperium Management Agency is a private creator management company offering multi-platform infrastructure, monetization strategy, and operational support for serious creators."
+        content="Imperium is a private creator management agency built for serious creators. We provide multi-platform oversight, monetization infrastructure, operational systems, and selective partnerships designed for long-term brand growth."
       />
       <link rel="canonical" href={SITE_URL} />
       <meta property="og:type" content="website" />
       <meta property="og:url" content={SITE_URL} />
-      <meta property="og:title" content="Imperium Management Agency | Private Creator Management" />
+      <meta property="og:title" content="Imperium — Private Creator Management Agency" />
       <meta
         property="og:description"
-        content="Private creator management agency providing operational infrastructure, multi-platform oversight, and growth strategy for serious creators."
+        content="Selective creator management with multi-platform infrastructure, monetization strategy, and private operational support. Built for creators operating at scale."
       />
       <meta property="og:image" content={OG_IMAGE} />
       <meta property="og:site_name" content={SITE_NAME} />
       <meta name="twitter:card" content="summary_large_image" />
-      <meta name="twitter:title" content="Imperium Management Agency | Private Creator Management" />
+      <meta name="twitter:title" content="Imperium — Private Creator Management Agency" />
       <meta
         name="twitter:description"
-        content="Private creator management agency providing operational infrastructure, multi-platform oversight, and growth strategy for serious creators."
+        content="Selective creator management with multi-platform infrastructure, monetization strategy, and private operational support. Built for creators operating at scale."
       />
       <meta name="twitter:image" content={OG_IMAGE} />
       <script type="application/ld+json">{JSON.stringify(organizationSchema)}</script>
