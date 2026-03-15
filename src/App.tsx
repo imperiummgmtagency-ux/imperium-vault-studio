@@ -43,6 +43,8 @@ const App = () => (
             <Route path="/multi-platform-management" element={<MultiPlatformManagement />} />
             <Route path="/x-twitter-management" element={<XTwitterManagement />} />
             <Route path="/reddit-management" element={<RedditManagement />} />
+            <Route path="/facebook-management" element={<FacebookManagement />} />
+            <Route path="/snapchat-management" element={<SnapchatManagement />} />
             {/* Redirects from old routes */}
             <Route path="/instagram-growth-management" element={<Navigate to="/instagram-management" replace />} />
             <Route path="/tiktok-growth-management" element={<Navigate to="/tiktok-management" replace />} />

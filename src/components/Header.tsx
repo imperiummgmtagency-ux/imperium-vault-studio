@@ -12,6 +12,8 @@ const platformLinks = [
   { label: "TikTok Management", href: "/tiktok-management" },
   { label: "X / Twitter Management", href: "/x-twitter-management" },
   { label: "Reddit Management", href: "/reddit-management" },
+  { label: "Facebook Management", href: "/facebook-management" },
+  { label: "Snapchat Management", href: "/snapchat-management" },
   { label: "Multi-Platform Management", href: "/multi-platform-management" },
 ];
 

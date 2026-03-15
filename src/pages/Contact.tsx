@@ -15,6 +15,8 @@ const PLATFORM_OPTIONS = [
   "TikTok Management",
   "X / Twitter Management",
   "Reddit Management",
+  "Facebook Management",
+  "Snapchat Management",
   "Multi-Platform Management",
   "Other",
 ];
