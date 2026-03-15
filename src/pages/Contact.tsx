@@ -349,7 +349,7 @@ const Contact = () => {
                 {/* Revenue */}
                 <div>
                   <label className="text-xs text-muted-foreground font-body mb-1.5 block">
-                    Approximate Monthly Revenue
+                    Approximate Monthly Revenue<OptionalTag />
                   </label>
                   <div className="relative">
                     <select
