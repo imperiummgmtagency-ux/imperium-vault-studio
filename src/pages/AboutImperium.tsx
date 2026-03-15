@@ -5,6 +5,7 @@ import { ArrowLeft } from "lucide-react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import GoldDivider from "@/components/GoldDivider";
+import { SITE_URL, OG_IMAGE, SITE_NAME } from "@/lib/seo";
 
 const fade = {
   initial: { opacity: 0, y: 30 },
@@ -42,13 +43,24 @@ const AboutImperium = () => (
       <title>About Imperium | Private Creator Management Agency</title>
       <meta
         name="description"
-        content="Learn about Imperium Management Agency — a private, selective creator management company built around structure, discretion, and serious long-term support."
+        content="Learn about Imperium Management Agency — a private, selective creator management company built around operational structure, discretion, multi-platform oversight, and serious long-term support for creators."
       />
+      <link rel="canonical" href={`${SITE_URL}/about-imperium`} />
+      <meta property="og:type" content="website" />
+      <meta property="og:url" content={`${SITE_URL}/about-imperium`} />
+      <meta property="og:title" content="About Imperium | Private Creator Management Agency" />
+      <meta property="og:description" content="A private, selective creator management company built around structure, discretion, and serious long-term support." />
+      <meta property="og:image" content={OG_IMAGE} />
+      <meta property="og:site_name" content={SITE_NAME} />
+      <meta name="twitter:card" content="summary_large_image" />
+      <meta name="twitter:title" content="About Imperium | Private Creator Management Agency" />
+      <meta name="twitter:description" content="A private, selective creator management company built around structure, discretion, and serious long-term support." />
+      <meta name="twitter:image" content={OG_IMAGE} />
     </Helmet>
     <Header />
 
-    {/* Secondary nav */}
-    <div className="relative z-10 max-w-7xl mx-auto px-4 md:px-6 pt-20 md:pt-24">
+    {/* Breadcrumb nav */}
+    <nav aria-label="Breadcrumb" className="relative z-10 max-w-7xl mx-auto px-4 md:px-6 pt-20 md:pt-24">
       <Link
         to="/"
         className="inline-flex items-center gap-1.5 font-body text-[10px] md:text-xs tracking-[0.15em] uppercase text-foreground/60 hover:text-primary transition-colors duration-300"
@@ -56,7 +68,7 @@ const AboutImperium = () => (
         <ArrowLeft size={14} className="text-primary/50" />
         Main Page
       </Link>
-    </div>
+    </nav>
 
     {/* Hero */}
     <section className="relative pt-8 md:pt-16 pb-16 md:pb-24 px-5 md:px-6">
@@ -93,7 +105,7 @@ const AboutImperium = () => (
     </section>
 
     {/* Content sections */}
-    {sections.map((section, i) => (
+    {sections.map((section) => (
       <div key={section.heading}>
         <GoldDivider />
         <motion.section {...fade} className="py-16 md:py-28 px-5 md:px-6">

@@ -2,8 +2,9 @@ import PlatformPageLayout from "@/components/PlatformPageLayout";
 
 const FacebookManagement = () => (
   <PlatformPageLayout
-    metaTitle="Facebook Management Agency | Imperium Management"
-    metaDescription="Facebook management that supports broader brand visibility, audience familiarity, and platform consistency within a larger creator system."
+    metaTitle="Facebook Management for Creators | Imperium Management Agency"
+    metaDescription="Facebook management that supports broader brand visibility, audience familiarity, and platform consistency within a larger creator management system."
+    canonicalPath="/facebook-management"
     heroHeading="Facebook Management That Supports Broader Brand Visibility"
     heroCopy="Facebook still plays a role in creator visibility, audience familiarity, and overall platform consistency when used correctly. Imperium helps position it as part of a wider management system rather than allowing it to drift outside the creator's core strategy."
     section1Heading="What Facebook Management Supports"

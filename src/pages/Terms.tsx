@@ -3,6 +3,9 @@ import LegalPageLayout, { LegalSection } from "@/components/LegalPageLayout";
 const Terms = () => (
   <LegalPageLayout
     title="Terms of Service"
+    metaTitle="Terms of Service | Imperium Management Agency"
+    metaDescription="Terms of Service for using the Imperium Management Agency website. Read about acceptable use, intellectual property, limitations, and partnership inquiry terms."
+    canonicalPath="/terms"
     subtitle="By accessing or using the Imperium Management Agency website, you acknowledge and agree to the following terms. Please read them carefully before using the site or submitting any information."
   >
     <LegalSection title="1. Acceptance of Terms">

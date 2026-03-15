@@ -1,4 +1,5 @@
 import { useState, FormEvent } from "react";
+import { Helmet } from "react-helmet-async";
 import { ChevronDown } from "lucide-react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
@@ -6,6 +7,7 @@ import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 import { toast } from "sonner";
 import { supabase } from "@/integrations/supabase/client";
+import { SITE_URL, OG_IMAGE, SITE_NAME } from "@/lib/seo";
 
 const PLATFORM_OPTIONS = [
   "OnlyFans Management",
@@ -220,6 +222,16 @@ const Contact = () => {
 
   return (
     <div className="min-h-screen bg-background text-foreground">
+      <Helmet>
+        <title>Request Partnership | Imperium Management Agency</title>
+        <meta name="description" content="Submit a private partnership inquiry to Imperium Management Agency. All creator applications are reviewed confidentially and selectively." />
+        <link rel="canonical" href={`${SITE_URL}/contact`} />
+        <meta property="og:title" content="Request Partnership | Imperium Management Agency" />
+        <meta property="og:description" content="Submit a private partnership inquiry. All creator applications are reviewed confidentially." />
+        <meta property="og:image" content={OG_IMAGE} />
+        <meta property="og:site_name" content={SITE_NAME} />
+        <meta name="twitter:card" content="summary" />
+      </Helmet>
       <Header />
       <main className="pt-24 md:pt-32 pb-16 md:pb-24 px-5 md:px-6">
         <div className="max-w-3xl mx-auto">

@@ -3,7 +3,8 @@ import PlatformPageLayout from "@/components/PlatformPageLayout";
 const OnlyFansManagement = () => (
   <PlatformPageLayout
     metaTitle="OnlyFans Management Agency | Imperium Management"
-    metaDescription="Structured OnlyFans management built for serious creator growth. Backend systems, audience retention, operational consistency, and long-term brand support."
+    metaDescription="Private OnlyFans management for serious creators. Backend systems, audience retention strategy, monetization optimization, and structured operational support from Imperium."
+    canonicalPath="/onlyfans-management"
     heroHeading="Private OnlyFans Management Built for Serious Creator Growth"
     heroCopy="Imperium provides structured OnlyFans management for creators who want stronger backend systems, tighter operational support, and a more serious approach to growth. Our focus is on helping creators improve consistency, strengthen execution, and operate with better support across the areas that directly impact performance."
     section1Heading="What Our OnlyFans Management Covers"

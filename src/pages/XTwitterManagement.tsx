@@ -3,7 +3,8 @@ import PlatformPageLayout from "@/components/PlatformPageLayout";
 const XTwitterManagement = () => (
   <PlatformPageLayout
     metaTitle="X / Twitter Management for Creators | Imperium Management"
-    metaDescription="Strategic X (Twitter) management to strengthen creator positioning, audience continuity, and ecosystem alignment."
+    metaDescription="X (Twitter) management to strengthen creator positioning, audience continuity, and ecosystem alignment. Strategic social platform support from Imperium."
+    canonicalPath="/x-twitter-management"
     heroHeading="X / Twitter Management for Creators Who Need Stronger Ecosystem Positioning"
     heroCopy="X remains one of the most useful ecosystem platforms for creators when it is managed with intent. Imperium helps creators strengthen platform presence, support audience continuity, and keep X aligned with broader traffic and brand goals."
     section1Heading="What Our X / Twitter Management Covers"

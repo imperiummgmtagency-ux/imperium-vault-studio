@@ -2,8 +2,9 @@ import PlatformPageLayout from "@/components/PlatformPageLayout";
 
 const RedditManagement = () => (
   <PlatformPageLayout
-    metaTitle="Reddit Management for Creators | Imperium Management"
-    metaDescription="Reddit management built for deliberate audience discovery, niche visibility, and stronger ecosystem traffic."
+    metaTitle="Reddit Management for Creators | Imperium Management Agency"
+    metaDescription="Reddit management built for deliberate audience discovery, niche community visibility, and stronger ecosystem traffic flow. Creator-focused Reddit strategy from Imperium."
+    canonicalPath="/reddit-management"
     heroHeading="Reddit Management Built for More Deliberate Audience Discovery"
     heroCopy="Reddit requires more precision than most social platforms. When approached correctly, it can support niche visibility, audience discovery, and supplemental traffic in a way that strengthens the creator's wider ecosystem."
     section1Heading="How We Approach Reddit Management"

@@ -2,8 +2,9 @@ import PlatformPageLayout from "@/components/PlatformPageLayout";
 
 const SnapchatManagement = () => (
   <PlatformPageLayout
-    metaTitle="Snapchat Management Agency | Imperium Management"
-    metaDescription="Snapchat management built for continuity, audience touchpoints, and stronger integration into the creator's overall platform ecosystem."
+    metaTitle="Snapchat Management for Creators | Imperium Management Agency"
+    metaDescription="Snapchat management built for audience continuity, communication touchpoints, and stronger integration into the creator's overall platform ecosystem."
+    canonicalPath="/snapchat-management"
     heroHeading="Snapchat Management Built for Continuity, Access, and Ecosystem Support"
     heroCopy="Snapchat can be valuable for creator communication, audience continuity, and platform diversification when it is handled with more structure. Imperium helps integrate Snapchat into the creator's wider ecosystem in a way that supports consistency and long-term usefulness."
     section1Heading="How We Support Snapchat Management"

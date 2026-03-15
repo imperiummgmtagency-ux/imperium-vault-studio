@@ -2,8 +2,9 @@ import PlatformPageLayout from "@/components/PlatformPageLayout";
 
 const TikTokGrowthManagement = () => (
   <PlatformPageLayout
-    metaTitle="TikTok Growth Strategy for Creators | Imperium Management"
-    metaDescription="TikTok management designed for visibility, content direction, and structured momentum across the broader creator brand."
+    metaTitle="TikTok Management for Creators | Imperium Management Agency"
+    metaDescription="TikTok management designed for visibility, content direction, and structured audience momentum. Short-form growth strategy for creators from Imperium."
+    canonicalPath="/tiktok-management"
     heroHeading="TikTok Management Built for Visibility, Direction, and Momentum"
     heroCopy="TikTok can generate major attention fast, but attention without structure rarely creates lasting value. Imperium helps creators approach TikTok with clearer direction, stronger consistency, and better alignment between visibility and overall business goals."
     section1Heading="How We Approach TikTok Management"

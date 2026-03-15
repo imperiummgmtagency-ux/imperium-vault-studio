@@ -1,16 +1,31 @@
+import { Helmet } from "react-helmet-async";
 import Header from "./Header";
 import Footer from "./Footer";
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
+import { SITE_URL, OG_IMAGE, SITE_NAME } from "@/lib/seo";
 
 interface LegalPageLayoutProps {
   title: string;
   subtitle?: string;
+  metaTitle?: string;
+  metaDescription?: string;
+  canonicalPath?: string;
   children: React.ReactNode;
 }
 
-const LegalPageLayout = ({ title, subtitle, children }: LegalPageLayoutProps) => (
+const LegalPageLayout = ({ title, subtitle, metaTitle, metaDescription, canonicalPath, children }: LegalPageLayoutProps) => (
   <div className="min-h-screen bg-background text-foreground">
+    <Helmet>
+      <title>{metaTitle || `${title} | ${SITE_NAME}`}</title>
+      {metaDescription && <meta name="description" content={metaDescription} />}
+      {canonicalPath && <link rel="canonical" href={`${SITE_URL}${canonicalPath}`} />}
+      <meta property="og:title" content={metaTitle || `${title} | ${SITE_NAME}`} />
+      {metaDescription && <meta property="og:description" content={metaDescription} />}
+      <meta property="og:image" content={OG_IMAGE} />
+      <meta property="og:site_name" content={SITE_NAME} />
+      <meta name="twitter:card" content="summary" />
+    </Helmet>
     <Header />
     <main className="pt-32 pb-24 px-6">
       <div className="max-w-3xl mx-auto">
