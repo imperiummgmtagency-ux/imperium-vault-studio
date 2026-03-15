@@ -64,6 +64,10 @@ const RequiredAsterisk = () => (
   <span className="text-primary ml-1 text-xs">*</span>
 );
 
+const OptionalTag = () => (
+  <span className="text-muted-foreground/50 ml-1.5 text-xs font-normal">(optional)</span>
+);
+
 const FieldError = ({ message }: { message: string }) => (
   <p className="text-primary/80 text-xs mt-1.5 font-body">{message}</p>
 );
