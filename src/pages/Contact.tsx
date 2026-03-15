@@ -64,6 +64,10 @@ const RequiredAsterisk = () => (
   <span className="text-primary ml-1 text-xs">*</span>
 );
 
+const OptionalTag = () => (
+  <span className="text-muted-foreground/50 ml-1.5 text-xs font-normal">(optional)</span>
+);
+
 const FieldError = ({ message }: { message: string }) => (
   <p className="text-primary/80 text-xs mt-1.5 font-body">{message}</p>
 );
@@ -263,7 +267,7 @@ const Contact = () => {
                 {/* Brand Name */}
                 <div>
                   <label className="text-xs text-muted-foreground font-body mb-1.5 block">
-                    Creator / Brand Name
+                    Creator / Brand Name<OptionalTag />
                   </label>
                   <input
                     type="text"
@@ -345,7 +349,7 @@ const Contact = () => {
                 {/* Revenue */}
                 <div>
                   <label className="text-xs text-muted-foreground font-body mb-1.5 block">
-                    Approximate Monthly Revenue
+                    Approximate Monthly Revenue<OptionalTag />
                   </label>
                   <div className="relative">
                     <select
@@ -362,13 +366,18 @@ const Contact = () => {
                 </div>
               </div>
 
-              <input
-                type="text"
-                placeholder="Primary Platform @ — @username"
-                value={platformHandle}
-                onChange={(e) => setPlatformHandle(e.target.value)}
-                className={inputClass()}
-              />
+              <div>
+                <label className="text-xs text-muted-foreground font-body mb-1.5 block">
+                  Primary Platform Handle<OptionalTag />
+                </label>
+                <input
+                  type="text"
+                  placeholder="@username"
+                  value={platformHandle}
+                  onChange={(e) => setPlatformHandle(e.target.value)}
+                  className={inputClass()}
+                />
+              </div>
 
               {/* Multi-select help areas */}
               <div>
@@ -406,13 +415,18 @@ const Contact = () => {
                 )}
               </div>
 
-              <textarea
-                placeholder="Anything you'd like to add?"
-                rows={3}
-                value={additionalNotes}
-                onChange={(e) => setAdditionalNotes(e.target.value)}
-                className={inputClass() + " resize-none"}
-              />
+              <div>
+                <label className="text-xs text-muted-foreground font-body mb-1.5 block">
+                  Additional Notes<OptionalTag />
+                </label>
+                <textarea
+                  placeholder="Anything you'd like to add?"
+                  rows={3}
+                  value={additionalNotes}
+                  onChange={(e) => setAdditionalNotes(e.target.value)}
+                  className={inputClass() + " resize-none"}
+                />
+              </div>
 
               <div>
                 <label className="flex items-start gap-3 cursor-pointer group">
