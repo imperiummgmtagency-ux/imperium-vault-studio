@@ -3,6 +3,9 @@ import LegalPageLayout, { LegalSection } from "@/components/LegalPageLayout";
 const Privacy = () => (
   <LegalPageLayout
     title="Privacy Policy"
+    metaTitle="Privacy Policy | Imperium Management Agency"
+    metaDescription="How Imperium Management Agency collects, uses, stores, and protects information submitted through this website. Read our full privacy practices."
+    canonicalPath="/privacy"
     subtitle="Imperium Management Agency is committed to responsible handling of information. This Privacy Policy explains how information may be collected, used, stored, and protected when individuals interact with this website."
   >
     <LegalSection title="1. Information We Collect">
