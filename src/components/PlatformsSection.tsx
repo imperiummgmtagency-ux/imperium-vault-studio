@@ -107,7 +107,7 @@ const PlatformsSection = () => (
                     className="w-5 h-5 object-contain opacity-80 group-hover:opacity-100 transition-opacity duration-300"
                   />
                 ) : (
-                  <LayoutGrid size={18} strokeWidth={1.5} className="text-white/80 group-hover:text-white transition-colors duration-300" />
+                  <LayoutGrid size={18} strokeWidth={1.5} className="text-foreground/80 group-hover:text-foreground transition-colors duration-300" />
                 )}
               </span>
             </div>

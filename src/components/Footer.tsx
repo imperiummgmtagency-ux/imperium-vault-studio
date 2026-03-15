@@ -35,7 +35,7 @@ const Footer = () => (
       </nav>
 
       <p className="text-muted-foreground/50 text-xs tracking-wide">
-        © Imperium Management Agency — All rights reserved
+        © {new Date().getFullYear()} Imperium Management Agency — All rights reserved
       </p>
     </div>
   </footer>

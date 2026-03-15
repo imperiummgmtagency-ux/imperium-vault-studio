@@ -190,7 +190,11 @@ const Contact = () => {
 
   if (showConfirmation) {
     return (
-      <div className="min-h-screen bg-background text-foreground">
+    <div className="min-h-screen bg-background text-foreground">
+        <Helmet>
+          <title>Request Received — Imperium Management Agency</title>
+          <meta name="robots" content="noindex, nofollow" />
+        </Helmet>
         <Header />
         <main className="pt-24 md:pt-32 pb-16 md:pb-24 px-5 md:px-6">
           <div className="max-w-3xl mx-auto">
