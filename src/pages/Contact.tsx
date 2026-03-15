@@ -1,4 +1,5 @@
 import { useState, FormEvent } from "react";
+import { Helmet } from "react-helmet-async";
 import { ChevronDown } from "lucide-react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
@@ -6,6 +7,7 @@ import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 import { toast } from "sonner";
 import { supabase } from "@/integrations/supabase/client";
+import { SITE_URL, OG_IMAGE, SITE_NAME } from "@/lib/seo";
 
 const PLATFORM_OPTIONS = [
   "OnlyFans Management",
